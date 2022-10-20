@@ -1,0 +1,54 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "np_admin",
+            "cwd": "src/clients/np_admin",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "np_admin (profile mode)",
+            "cwd": "src/clients/np_admin",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "np_admin (release mode)",
+            "cwd": "src/clients/np_admin",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "np_core",
+            "cwd": "src/clients/np_core",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "np_user",
+            "cwd": "src/clients/np_user",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "np_user (profile mode)",
+            "cwd": "src/clients/np_user",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "np_user (release mode)",
+            "cwd": "src/clients/np_user",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
