@@ -1,4 +1,4 @@
-import 'package:naya_pakwan/common/domain/recipe/recipe_category.dart';
+import 'package:np_core/recipe/recipe_category.dart';
 
 class Recipe {
   final String id;

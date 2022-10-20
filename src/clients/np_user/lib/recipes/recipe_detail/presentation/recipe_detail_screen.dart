@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:np_user/common/domain/recipe/recipe.dart';
+import 'package:np_core/recipe/recipe.dart';
 import 'package:np_user/recipes/recipe_detail/presentation/directions_sections.dart';
 import 'package:np_user/recipes/recipe_detail/presentation/ingredients_section.dart';
 
@@ -33,20 +33,20 @@ class RecipeDetailScreen extends StatelessWidget {
           SliverToBoxAdapter(
             child: RecipeDirectionsSection(recipe: recipe),
           ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return Container(
-                  color: index.isOdd ? Colors.white : Colors.black12,
-                  height: 100.0,
-                  child: Center(
-                    child: Text('$index', textScaleFactor: 5),
-                  ),
-                );
-              },
-              childCount: 20,
-            ),
-          ),
+          // SliverList(
+          //   delegate: SliverChildBuilderDelegate(
+          //     childCount: 20,
+          //     (BuildContext context, int index) {
+          //       return Container(
+          //         color: index.isOdd ? Colors.white : Colors.black12,
+          //         height: 100.0,
+          //         child: Center(
+          //           child: Text('$index', textScaleFactor: 5),
+          //         ),
+          //       );
+          //     },
+          //   ),
+          // ),
         ],
       ),
     );
