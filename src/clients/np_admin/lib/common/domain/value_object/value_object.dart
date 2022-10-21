@@ -118,7 +118,7 @@ class VDoubleError with _$VDoubleError {
 class UniqueId extends ValueObject<String, String> {
   factory UniqueId() {
     return UniqueId._(
-      right<String, String>(Uuid().v1()),
+      right<String, String>(const Uuid().v1()),
     );
   }
 
