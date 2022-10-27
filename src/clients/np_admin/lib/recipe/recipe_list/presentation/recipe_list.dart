@@ -10,12 +10,35 @@ class RecipeList extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<RecipeListBloc, RecipeListState>(
       builder: (context, state) {
-        return ListView.builder(
-          itemBuilder: (context, index) {
-            return ListTile();
-          },
+        return state.recipeList.fold(
+          () => const Center(child: CircularProgressIndicator()),
+          (recipeListOrFailure) => recipeListOrFailure.fold(
+            (failure) => const Center(child: Text('Failed To fetch Recipes')),
+            (recipeList) {
+              return ListView.builder(
+                itemCount: recipeList.length(),
+                itemBuilder: (context, index) {
+                  return RecipeCard(recipe: recipeList.toList()[index]);
+                },
+              );
+            },
+          ),
         );
       },
+    );
+  }
+}
+
+class RecipeCard extends StatelessWidget {
+  final Recipe recipe;
+  const RecipeCard({Key? key, required this.recipe}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: Text(recipe.title),
+      ),
     );
   }
 }

@@ -16,6 +16,7 @@ class FirebaseAuthFacade implements IAuthFacade {
 
   @override
   Future<Option<domain_user.User>> getSignedInUser() async {
+    await _firebaseAuth.userChanges().first;
     //TODO: please fix the ugly code below
     if (_firebaseAuth.currentUser == null) {
       return none();
