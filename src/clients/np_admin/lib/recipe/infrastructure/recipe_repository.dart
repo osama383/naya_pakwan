@@ -6,7 +6,7 @@ import 'package:np_core/recipe/recipe.dart';
 @Injectable(as: IRecipeRepository)
 class RecipeRepository implements IRecipeRepository {
   @override
-  Either<Unit, IList<Recipe>> fetchRecipes() {
+  Future<Either<Unit, IList<Recipe>>> fetchRecipes() async {
     return right(IList.from(dummyRecipes));
   }
 }

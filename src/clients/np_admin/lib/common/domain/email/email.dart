@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-
-import '../value_object/value_object.dart';
+import 'package:np_core/value_object/value_object.dart';
 
 class EmailAddress extends ValueObject<String, String> implements Equatable {
   EmailAddress(String input) : super(validate(input));

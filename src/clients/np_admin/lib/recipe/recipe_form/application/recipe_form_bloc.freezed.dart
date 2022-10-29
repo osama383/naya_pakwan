@@ -221,6 +221,7 @@ abstract class _OnTitleInput implements RecipeFormEvent {
 
 /// @nodoc
 mixin _$RecipeFormState {
+  Option<Recipe> get recipe => throw _privateConstructorUsedError;
   bool get submissionInProgress => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -234,7 +235,7 @@ abstract class $RecipeFormStateCopyWith<$Res> {
           RecipeFormState value, $Res Function(RecipeFormState) then) =
       _$RecipeFormStateCopyWithImpl<$Res, RecipeFormState>;
   @useResult
-  $Res call({bool submissionInProgress});
+  $Res call({Option<Recipe> recipe, bool submissionInProgress});
 }
 
 /// @nodoc
@@ -250,9 +251,14 @@ class _$RecipeFormStateCopyWithImpl<$Res, $Val extends RecipeFormState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? recipe = null,
     Object? submissionInProgress = null,
   }) {
     return _then(_value.copyWith(
+      recipe: null == recipe
+          ? _value.recipe
+          : recipe // ignore: cast_nullable_to_non_nullable
+              as Option<Recipe>,
       submissionInProgress: null == submissionInProgress
           ? _value.submissionInProgress
           : submissionInProgress // ignore: cast_nullable_to_non_nullable
@@ -269,7 +275,7 @@ abstract class _$$_RecipeFormStateCopyWith<$Res>
       __$$_RecipeFormStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool submissionInProgress});
+  $Res call({Option<Recipe> recipe, bool submissionInProgress});
 }
 
 /// @nodoc
@@ -283,9 +289,14 @@ class __$$_RecipeFormStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? recipe = null,
     Object? submissionInProgress = null,
   }) {
     return _then(_$_RecipeFormState(
+      recipe: null == recipe
+          ? _value.recipe
+          : recipe // ignore: cast_nullable_to_non_nullable
+              as Option<Recipe>,
       submissionInProgress: null == submissionInProgress
           ? _value.submissionInProgress
           : submissionInProgress // ignore: cast_nullable_to_non_nullable
@@ -297,14 +308,17 @@ class __$$_RecipeFormStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_RecipeFormState implements _RecipeFormState {
-  const _$_RecipeFormState({required this.submissionInProgress});
+  const _$_RecipeFormState(
+      {required this.recipe, required this.submissionInProgress});
 
+  @override
+  final Option<Recipe> recipe;
   @override
   final bool submissionInProgress;
 
   @override
   String toString() {
-    return 'RecipeFormState(submissionInProgress: $submissionInProgress)';
+    return 'RecipeFormState(recipe: $recipe, submissionInProgress: $submissionInProgress)';
   }
 
   @override
@@ -312,12 +326,13 @@ class _$_RecipeFormState implements _RecipeFormState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RecipeFormState &&
+            (identical(other.recipe, recipe) || other.recipe == recipe) &&
             (identical(other.submissionInProgress, submissionInProgress) ||
                 other.submissionInProgress == submissionInProgress));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, submissionInProgress);
+  int get hashCode => Object.hash(runtimeType, recipe, submissionInProgress);
 
   @JsonKey(ignore: true)
   @override
@@ -327,9 +342,12 @@ class _$_RecipeFormState implements _RecipeFormState {
 }
 
 abstract class _RecipeFormState implements RecipeFormState {
-  const factory _RecipeFormState({required final bool submissionInProgress}) =
-      _$_RecipeFormState;
+  const factory _RecipeFormState(
+      {required final Option<Recipe> recipe,
+      required final bool submissionInProgress}) = _$_RecipeFormState;
 
+  @override
+  Option<Recipe> get recipe;
   @override
   bool get submissionInProgress;
   @override

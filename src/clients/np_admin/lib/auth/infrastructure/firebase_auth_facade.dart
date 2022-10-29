@@ -3,7 +3,7 @@ import 'package:injectable/injectable.dart';
 import 'package:np_admin/auth/domain/auth_failure/auth_failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:np_admin/auth/infrastructure/i_auth_facade.dart';
-import 'package:np_admin/common/domain/unique_id/unique_id.dart';
+import 'package:np_core/unique_id/unique_id.dart';
 import 'package:np_admin/common/domain/user/user.dart' as domain_user;
 import 'package:np_admin/common/domain/password/password.dart';
 import 'package:np_admin/common/domain/email/email.dart';

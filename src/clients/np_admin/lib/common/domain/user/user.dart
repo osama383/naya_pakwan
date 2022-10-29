@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:np_admin/common/domain/email/email.dart';
-import 'package:np_admin/common/domain/unique_id/unique_id.dart';
+import 'package:np_core/unique_id/unique_id.dart';
 
 part 'user.freezed.dart';
 

@@ -4,7 +4,6 @@ import 'package:np_admin/auth/sign_in/application/sign_in_bloc.dart';
 import 'package:np_admin/common/presentation/wip_overlay.dart';
 import 'package:np_admin/dashboard/presentation/dashboard_screen.dart';
 import 'package:np_admin/injection.dart';
-import 'package:np_admin/recipe/recipe_list/presentation/recipe_list_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);

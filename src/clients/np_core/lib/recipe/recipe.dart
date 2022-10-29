@@ -1,42 +1,48 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:np_core/recipe/recipe_category.dart';
+import 'package:np_core/unique_id/unique_id.dart';
 
-class Recipe {
-  final String id;
-  final String title;
-  final RecipeCategory category;
+part 'recipe.freezed.dart';
 
-  final String description;
+@freezed
+class Recipe with _$Recipe {
+  const factory Recipe({
+    required UniqueId id,
+    required String title,
+    required RecipeCategory category,
+    required String description,
 
-  //ingredient usualy follows the pattern of quantity, container and item
-  //2 cups of rice
-  //1 tablespoon soymilk, preferrably unsweetened
-  final List<String> ingredients;
+    //ingredient usualy follows the pattern of quantity, container and item
+    //2 cups of rice
+    //1 tablespoon soymilk, preferrably unsweetened
+    required List<String> ingredients,
 
-  //steps or directions
-  final List<String> directions;
+    //steps or directions
+    required List<String> directions,
 
-  //tips
-  //should default to empty list when parsing fromjson if key not found
-  final List<String> tips;
+    //tips
+    //should default to empty list when parsing fromjson if key not found
+    required List<String> tips,
 
-  //nutrition facts
-  //should definityely have a dedicated class because it follows a strict pattern
+    //nutrition facts
+    //should definityely have a dedicated class because it follows a strict pattern
+  }) = _Recipe;
 
-  const Recipe({
-    required this.id,
-    required this.title,
-    required this.category,
-    required this.description,
-    required this.ingredients,
-    required this.directions,
-    required this.tips,
-  });
+  factory Recipe.initial() => _Recipe(
+        id: UniqueId(),
+        title: '',
+        category: RecipeCategory.lunchAndDinner,
+        description: '',
+        ingredients: [],
+        directions: [],
+        tips: [],
+      );
 }
 
 //dummy_recipes
-const List<Recipe> dummyRecipes = [
+List<Recipe> dummyRecipes = [
   Recipe(
-    id: '1',
+    id: UniqueId.fromUniqueString('1'),
     title: 'Naan Paratha',
     category: RecipeCategory.breakfast,
     description:
@@ -53,7 +59,7 @@ const List<Recipe> dummyRecipes = [
     tips: [],
   ),
   Recipe(
-    id: '2',
+    id: UniqueId.fromUniqueString('1'),
     title: 'Daal Chawal',
     category: RecipeCategory.lunchAndDinner,
     description:

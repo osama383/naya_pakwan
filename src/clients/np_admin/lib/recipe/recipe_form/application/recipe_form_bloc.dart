@@ -1,7 +1,9 @@
 import 'package:bloc/bloc.dart';
+import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
+import 'package:np_core/recipe/recipe.dart';
 
 part 'recipe_form_event.dart';
 part 'recipe_form_state.dart';
