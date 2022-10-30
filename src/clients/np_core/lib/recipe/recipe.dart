@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:np_core/recipe/recipe_category.dart';
+import 'package:np_core/recipe/recipe_vo.dart';
 import 'package:np_core/unique_id/unique_id.dart';
 
 part 'recipe.freezed.dart';
@@ -8,9 +9,9 @@ part 'recipe.freezed.dart';
 class Recipe with _$Recipe {
   const factory Recipe({
     required UniqueId id,
-    required String title,
+    required RecipeTitle title,
     required RecipeCategory category,
-    required String description,
+    required RecipeDescription description,
 
     //ingredient usualy follows the pattern of quantity, container and item
     //2 cups of rice
@@ -30,9 +31,9 @@ class Recipe with _$Recipe {
 
   factory Recipe.initial() => _Recipe(
         id: UniqueId(),
-        title: '',
+        title: RecipeTitle.empty(),
         category: RecipeCategory.lunchAndDinner,
-        description: '',
+        description: RecipeDescription.empty(),
         ingredients: [],
         directions: [],
         tips: [],
@@ -43,10 +44,10 @@ class Recipe with _$Recipe {
 List<Recipe> dummyRecipes = [
   Recipe(
     id: UniqueId.fromUniqueString('1'),
-    title: 'Naan Paratha',
+    title: RecipeTitle('Naan Paratha'),
     category: RecipeCategory.breakfast,
-    description:
-        'This protein-packed breakfast option is great because the prep work is done the night before. All you need to do is wake up and enjoy.',
+    description: RecipeDescription(
+        'This protein-packed breakfast option is great because the prep work is done the night before. All you need to do is wake up and enjoy.'),
     ingredients: [
       '1/2 kg Wheat',
       '1 teaspoon Sugar',
@@ -60,10 +61,10 @@ List<Recipe> dummyRecipes = [
   ),
   Recipe(
     id: UniqueId.fromUniqueString('1'),
-    title: 'Daal Chawal',
+    title: RecipeTitle('Daal Chawal'),
     category: RecipeCategory.lunchAndDinner,
-    description:
-        'This protein-packed breakfast option is great because the prep work is done the night before. All you need to do is wake up and enjoy.',
+    description: RecipeDescription(
+        'This protein-packed breakfast option is great because the prep work is done the night before. All you need to do is wake up and enjoy.'),
     ingredients: [],
     directions: [],
     tips: [],

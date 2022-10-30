@@ -17,9 +17,9 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Recipe {
   UniqueId get id => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
+  RecipeTitle get title => throw _privateConstructorUsedError;
   RecipeCategory get category => throw _privateConstructorUsedError;
-  String get description =>
+  RecipeDescription get description =>
       throw _privateConstructorUsedError; //ingredient usualy follows the pattern of quantity, container and item
 //2 cups of rice
 //1 tablespoon soymilk, preferrably unsweetened
@@ -40,9 +40,9 @@ abstract class $RecipeCopyWith<$Res> {
   @useResult
   $Res call(
       {UniqueId id,
-      String title,
+      RecipeTitle title,
       RecipeCategory category,
-      String description,
+      RecipeDescription description,
       List<String> ingredients,
       List<String> directions,
       List<String> tips});
@@ -77,7 +77,7 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as RecipeTitle,
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -85,7 +85,7 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as RecipeDescription,
       ingredients: null == ingredients
           ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
@@ -110,9 +110,9 @@ abstract class _$$_RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
   @useResult
   $Res call(
       {UniqueId id,
-      String title,
+      RecipeTitle title,
       RecipeCategory category,
-      String description,
+      RecipeDescription description,
       List<String> ingredients,
       List<String> directions,
       List<String> tips});
@@ -144,7 +144,7 @@ class __$$_RecipeCopyWithImpl<$Res>
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as RecipeTitle,
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -152,7 +152,7 @@ class __$$_RecipeCopyWithImpl<$Res>
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as RecipeDescription,
       ingredients: null == ingredients
           ? _value._ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
@@ -187,11 +187,11 @@ class _$_Recipe implements _Recipe {
   @override
   final UniqueId id;
   @override
-  final String title;
+  final RecipeTitle title;
   @override
   final RecipeCategory category;
   @override
-  final String description;
+  final RecipeDescription description;
 //ingredient usualy follows the pattern of quantity, container and item
 //2 cups of rice
 //1 tablespoon soymilk, preferrably unsweetened
@@ -269,9 +269,9 @@ class _$_Recipe implements _Recipe {
 abstract class _Recipe implements Recipe {
   const factory _Recipe(
       {required final UniqueId id,
-      required final String title,
+      required final RecipeTitle title,
       required final RecipeCategory category,
-      required final String description,
+      required final RecipeDescription description,
       required final List<String> ingredients,
       required final List<String> directions,
       required final List<String> tips}) = _$_Recipe;
@@ -279,11 +279,11 @@ abstract class _Recipe implements Recipe {
   @override
   UniqueId get id;
   @override
-  String get title;
+  RecipeTitle get title;
   @override
   RecipeCategory get category;
   @override
-  String get description;
+  RecipeDescription get description;
   @override //ingredient usualy follows the pattern of quantity, container and item
 //2 cups of rice
 //1 tablespoon soymilk, preferrably unsweetened

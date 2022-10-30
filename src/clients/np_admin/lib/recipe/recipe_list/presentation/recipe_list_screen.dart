@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:np_admin/injection.dart';
-import 'package:np_admin/recipe/recipe_form/presentation/add_recipe_screen.dart';
+import 'package:np_admin/recipe/recipe_form/presentation/recipe_form_screen.dart';
 import 'package:np_admin/recipe/recipe_list/application/recipe_list_bloc.dart';
 import 'package:np_admin/recipe/recipe_list/presentation/recipe_list.dart';
 import 'package:np_core/recipe/recipe.dart';
@@ -23,7 +23,7 @@ class RecipeListScreen extends StatelessWidget {
               title: const Text('Add Recipe'),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (_) => RecipeFormScreen(recipe: Recipe.initial()),
+                  builder: (_) => const RecipeFormScreen(),
                 ));
               },
             ),

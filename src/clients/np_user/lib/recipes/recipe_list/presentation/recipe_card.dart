@@ -30,7 +30,7 @@ class RecipeCard extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text(recipe.title),
+              title: Text(recipe.title.getOrCrash),
               subtitle: Text(recipe.category.name),
             )
           ],

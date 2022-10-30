@@ -37,6 +37,7 @@ dependencies:
   injectable: ^1.5.3
   firebase_auth: ^4.0.2
   firebase_core: ^2.1.0
+  flutter_hooks: ^0.18.5+1
   cloud_firestore: ^4.0.2
 
 dev_dependencies:
