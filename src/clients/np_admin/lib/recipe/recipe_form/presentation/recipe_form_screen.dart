@@ -1,4 +1,4 @@
-import 'package:dartz/dartz.dart';
+import 'package:dartz/dartz.dart' as dartz;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -14,8 +14,8 @@ class RecipeFormScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<RecipeFormBloc>(
-      create: (context) =>
-          getIt()..add(RecipeFormEvent.onInitialized(optionOf(editedRecipe))),
+      create: (context) => getIt()
+        ..add(RecipeFormEvent.onInitialized(dartz.optionOf(editedRecipe))),
       child: BlocConsumer<RecipeFormBloc, RecipeFormState>(
         listener: (context, state) {},
         builder: (context, state) {
@@ -37,7 +37,7 @@ class RecipeFormScreen extends StatelessWidget {
                       SizedBox(height: 16),
                       _CategoryInput(),
                       SizedBox(height: 16),
-                      _DirectionsInput(),
+                      _IngredientsInput(),
                     ],
                   ),
                 ),
@@ -136,32 +136,73 @@ class _CategoryInput extends HookWidget {
   }
 }
 
-class _DirectionsInput extends HookWidget {
-  const _DirectionsInput({super.key});
+class _IngredientsInput extends StatefulWidget {
+  const _IngredientsInput({super.key});
+
+  @override
+  State<_IngredientsInput> createState() => _IngredientsInputState();
+}
+
+class _IngredientsInputState extends State<_IngredientsInput> {
+  bool isEditing = false;
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<RecipeFormBloc, RecipeFormState>(
-      listenWhen: (prev, curr) => prev.isEditing != curr.isEditing,
-      listener: (_, state) {
-        // textEditingController.text = state.recipe.description.valueAsString;
-      },
-      buildWhen: (prev, curr) => prev.recipe.category != curr.recipe.category,
+    return BlocBuilder<RecipeFormBloc, RecipeFormState>(
+      // buildWhen: (prev, curr) =>
+      //     prev.recipe.ingredients != curr.recipe.ingredients,
       builder: (context, state) {
+        print('building ingredients list');
+        state.recipe.ingredients.list.forEach((entry) {
+          print(entry.text);
+        });
         return Card(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const ListTile(title: Text('Directions')),
-              ...state.recipe.directions.map((e) => Text(e)).toList(),
-              Row(
-                children: [
-                  Expanded(child: TextFormField()),
-                  MaterialButton(
-                    onPressed: () {},
-                    child: const Text('Save'),
-                  ),
-                ],
+              ListTile(
+                title: const Text('Ingredients'),
+                trailing: IconButton(
+                  onPressed: () => setState(() => isEditing = !isEditing),
+                  icon: isEditing
+                      ? const Icon(Icons.done)
+                      : const Icon(Icons.edit),
+                ),
               ),
+              ...state.recipe.ingredients.list.map((e) {
+                if (isEditing) {
+                  return Row(
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          initialValue: e.text,
+                          // decoration:
+                          //     const InputDecoration(label: Text(e.id.toString())),
+                          onChanged: (input) => context
+                              .read<RecipeFormBloc>()
+                              .add(RecipeFormEvent.onChangeEntryFromIngredients(
+                                  e, input)),
+                          // validator: (_) => state.recipe.description.value.fold(
+                          //   (l) => 'Invalid',
+                          //   (r) => null,
+                          // ),
+                        ),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.remove),
+                        onPressed: () {
+                          context.read<RecipeFormBloc>().add(
+                              RecipeFormEvent.onRemoveEntryFromIngredients(e));
+                        },
+                      ),
+                    ],
+                  );
+                }
+                return ListTile(
+                  title: Text(e.text),
+                  dense: true,
+                );
+              }).toList(),
             ],
           ),
         );

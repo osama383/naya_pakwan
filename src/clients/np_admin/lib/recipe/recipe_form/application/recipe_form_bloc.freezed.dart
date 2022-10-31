@@ -22,6 +22,9 @@ mixin _$RecipeFormEvent {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$RecipeFormEvent {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$RecipeFormEvent {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +56,10 @@ mixin _$RecipeFormEvent {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +68,10 @@ mixin _$RecipeFormEvent {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +80,10 @@ mixin _$RecipeFormEvent {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -155,6 +176,9 @@ class _$_OnInitialized implements _OnInitialized {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
   }) {
     return onInitialized(initialRecipeOption);
   }
@@ -166,6 +190,9 @@ class _$_OnInitialized implements _OnInitialized {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
   }) {
     return onInitialized?.call(initialRecipeOption);
   }
@@ -177,6 +204,9 @@ class _$_OnInitialized implements _OnInitialized {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) {
     if (onInitialized != null) {
@@ -192,6 +222,10 @@ class _$_OnInitialized implements _OnInitialized {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
   }) {
     return onInitialized(this);
   }
@@ -203,6 +237,10 @@ class _$_OnInitialized implements _OnInitialized {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
   }) {
     return onInitialized?.call(this);
   }
@@ -214,6 +252,10 @@ class _$_OnInitialized implements _OnInitialized {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) {
     if (onInitialized != null) {
@@ -301,6 +343,9 @@ class _$_OnTitleInput implements _OnTitleInput {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
   }) {
     return onTitleInput(input);
   }
@@ -312,6 +357,9 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
   }) {
     return onTitleInput?.call(input);
   }
@@ -323,6 +371,9 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) {
     if (onTitleInput != null) {
@@ -338,6 +389,10 @@ class _$_OnTitleInput implements _OnTitleInput {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
   }) {
     return onTitleInput(this);
   }
@@ -349,6 +404,10 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
   }) {
     return onTitleInput?.call(this);
   }
@@ -360,6 +419,10 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) {
     if (onTitleInput != null) {
@@ -447,6 +510,9 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
   }) {
     return onCategoryInput(category);
   }
@@ -458,6 +524,9 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
   }) {
     return onCategoryInput?.call(category);
   }
@@ -469,6 +538,9 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) {
     if (onCategoryInput != null) {
@@ -484,6 +556,10 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
   }) {
     return onCategoryInput(this);
   }
@@ -495,6 +571,10 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
   }) {
     return onCategoryInput?.call(this);
   }
@@ -506,6 +586,10 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) {
     if (onCategoryInput != null) {
@@ -594,6 +678,9 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
   }) {
     return onDescriptionInput(input);
   }
@@ -605,6 +692,9 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
   }) {
     return onDescriptionInput?.call(input);
   }
@@ -616,6 +706,9 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) {
     if (onDescriptionInput != null) {
@@ -631,6 +724,10 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
   }) {
     return onDescriptionInput(this);
   }
@@ -642,6 +739,10 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
   }) {
     return onDescriptionInput?.call(this);
   }
@@ -653,6 +754,10 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
     required TResult orElse(),
   }) {
     if (onDescriptionInput != null) {
@@ -669,6 +774,356 @@ abstract class _OnDescriptionInput implements RecipeFormEvent {
   @JsonKey(ignore: true)
   _$$_OnDescriptionInputCopyWith<_$_OnDescriptionInput> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_OnRemoveEntryFromIngredientsCopyWith<$Res> {
+  factory _$$_OnRemoveEntryFromIngredientsCopyWith(
+          _$_OnRemoveEntryFromIngredients value,
+          $Res Function(_$_OnRemoveEntryFromIngredients) then) =
+      __$$_OnRemoveEntryFromIngredientsCopyWithImpl<$Res>;
+  @useResult
+  $Res call({EntryItem item});
+}
+
+/// @nodoc
+class __$$_OnRemoveEntryFromIngredientsCopyWithImpl<$Res>
+    extends _$RecipeFormEventCopyWithImpl<$Res, _$_OnRemoveEntryFromIngredients>
+    implements _$$_OnRemoveEntryFromIngredientsCopyWith<$Res> {
+  __$$_OnRemoveEntryFromIngredientsCopyWithImpl(
+      _$_OnRemoveEntryFromIngredients _value,
+      $Res Function(_$_OnRemoveEntryFromIngredients) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? item = null,
+  }) {
+    return _then(_$_OnRemoveEntryFromIngredients(
+      null == item
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as EntryItem,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnRemoveEntryFromIngredients implements _OnRemoveEntryFromIngredients {
+  const _$_OnRemoveEntryFromIngredients(this.item);
+
+  @override
+  final EntryItem item;
+
+  @override
+  String toString() {
+    return 'RecipeFormEvent.onRemoveEntryFromIngredients(item: $item)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_OnRemoveEntryFromIngredients &&
+            (identical(other.item, item) || other.item == item));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, item);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OnRemoveEntryFromIngredientsCopyWith<_$_OnRemoveEntryFromIngredients>
+      get copyWith => __$$_OnRemoveEntryFromIngredientsCopyWithImpl<
+          _$_OnRemoveEntryFromIngredients>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Recipe> initialRecipeOption) onInitialized,
+    required TResult Function(String input) onTitleInput,
+    required TResult Function(RecipeCategory category) onCategoryInput,
+    required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
+  }) {
+    return onRemoveEntryFromIngredients(item);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult? Function(String input)? onTitleInput,
+    TResult? Function(RecipeCategory category)? onCategoryInput,
+    TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+  }) {
+    return onRemoveEntryFromIngredients?.call(item);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult Function(String input)? onTitleInput,
+    TResult Function(RecipeCategory category)? onCategoryInput,
+    TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+    required TResult orElse(),
+  }) {
+    if (onRemoveEntryFromIngredients != null) {
+      return onRemoveEntryFromIngredients(item);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnInitialized value) onInitialized,
+    required TResult Function(_OnTitleInput value) onTitleInput,
+    required TResult Function(_OnCategoryInput value) onCategoryInput,
+    required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
+  }) {
+    return onRemoveEntryFromIngredients(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnInitialized value)? onInitialized,
+    TResult? Function(_OnTitleInput value)? onTitleInput,
+    TResult? Function(_OnCategoryInput value)? onCategoryInput,
+    TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+  }) {
+    return onRemoveEntryFromIngredients?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnInitialized value)? onInitialized,
+    TResult Function(_OnTitleInput value)? onTitleInput,
+    TResult Function(_OnCategoryInput value)? onCategoryInput,
+    TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+    required TResult orElse(),
+  }) {
+    if (onRemoveEntryFromIngredients != null) {
+      return onRemoveEntryFromIngredients(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnRemoveEntryFromIngredients implements RecipeFormEvent {
+  const factory _OnRemoveEntryFromIngredients(final EntryItem item) =
+      _$_OnRemoveEntryFromIngredients;
+
+  EntryItem get item;
+  @JsonKey(ignore: true)
+  _$$_OnRemoveEntryFromIngredientsCopyWith<_$_OnRemoveEntryFromIngredients>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_OnChangeEntryFromIngredientsCopyWith<$Res> {
+  factory _$$_OnChangeEntryFromIngredientsCopyWith(
+          _$_OnChangeEntryFromIngredients value,
+          $Res Function(_$_OnChangeEntryFromIngredients) then) =
+      __$$_OnChangeEntryFromIngredientsCopyWithImpl<$Res>;
+  @useResult
+  $Res call({EntryItem item, String netText});
+}
+
+/// @nodoc
+class __$$_OnChangeEntryFromIngredientsCopyWithImpl<$Res>
+    extends _$RecipeFormEventCopyWithImpl<$Res, _$_OnChangeEntryFromIngredients>
+    implements _$$_OnChangeEntryFromIngredientsCopyWith<$Res> {
+  __$$_OnChangeEntryFromIngredientsCopyWithImpl(
+      _$_OnChangeEntryFromIngredients _value,
+      $Res Function(_$_OnChangeEntryFromIngredients) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? item = null,
+    Object? netText = null,
+  }) {
+    return _then(_$_OnChangeEntryFromIngredients(
+      null == item
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as EntryItem,
+      null == netText
+          ? _value.netText
+          : netText // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnChangeEntryFromIngredients implements _OnChangeEntryFromIngredients {
+  const _$_OnChangeEntryFromIngredients(this.item, this.netText);
+
+  @override
+  final EntryItem item;
+  @override
+  final String netText;
+
+  @override
+  String toString() {
+    return 'RecipeFormEvent.onChangeEntryFromIngredients(item: $item, netText: $netText)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_OnChangeEntryFromIngredients &&
+            (identical(other.item, item) || other.item == item) &&
+            (identical(other.netText, netText) || other.netText == netText));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, item, netText);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OnChangeEntryFromIngredientsCopyWith<_$_OnChangeEntryFromIngredients>
+      get copyWith => __$$_OnChangeEntryFromIngredientsCopyWithImpl<
+          _$_OnChangeEntryFromIngredients>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Recipe> initialRecipeOption) onInitialized,
+    required TResult Function(String input) onTitleInput,
+    required TResult Function(RecipeCategory category) onCategoryInput,
+    required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
+  }) {
+    return onChangeEntryFromIngredients(item, netText);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult? Function(String input)? onTitleInput,
+    TResult? Function(RecipeCategory category)? onCategoryInput,
+    TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+  }) {
+    return onChangeEntryFromIngredients?.call(item, netText);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult Function(String input)? onTitleInput,
+    TResult Function(RecipeCategory category)? onCategoryInput,
+    TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+    required TResult orElse(),
+  }) {
+    if (onChangeEntryFromIngredients != null) {
+      return onChangeEntryFromIngredients(item, netText);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnInitialized value) onInitialized,
+    required TResult Function(_OnTitleInput value) onTitleInput,
+    required TResult Function(_OnCategoryInput value) onCategoryInput,
+    required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
+  }) {
+    return onChangeEntryFromIngredients(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnInitialized value)? onInitialized,
+    TResult? Function(_OnTitleInput value)? onTitleInput,
+    TResult? Function(_OnCategoryInput value)? onCategoryInput,
+    TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+  }) {
+    return onChangeEntryFromIngredients?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnInitialized value)? onInitialized,
+    TResult Function(_OnTitleInput value)? onTitleInput,
+    TResult Function(_OnCategoryInput value)? onCategoryInput,
+    TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+    required TResult orElse(),
+  }) {
+    if (onChangeEntryFromIngredients != null) {
+      return onChangeEntryFromIngredients(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnChangeEntryFromIngredients implements RecipeFormEvent {
+  const factory _OnChangeEntryFromIngredients(
+          final EntryItem item, final String netText) =
+      _$_OnChangeEntryFromIngredients;
+
+  EntryItem get item;
+  String get netText;
+  @JsonKey(ignore: true)
+  _$$_OnChangeEntryFromIngredientsCopyWith<_$_OnChangeEntryFromIngredients>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc

@@ -12,5 +12,13 @@ class RecipeFormEvent with _$RecipeFormEvent {
   const factory RecipeFormEvent.onDescriptionInput(String input) =
       _OnDescriptionInput;
 
-  const factory RecipeFormEvent.onAionInput(String input) = _OnDescriptionInput;
+  const factory RecipeFormEvent.onRemoveEntryFromIngredients(EntryItem item) =
+      _OnRemoveEntryFromIngredients;
+
+  const factory RecipeFormEvent.onChangeEntryFromIngredients(
+    EntryItem item,
+    String netText,
+  ) = _OnChangeEntryFromIngredients;
+
+  // const factory RecipeFormEvent.onAionInput(String input) = _OnDescriptionInput;
 }

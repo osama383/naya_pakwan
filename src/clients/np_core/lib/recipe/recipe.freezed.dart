@@ -23,7 +23,7 @@ mixin _$Recipe {
       throw _privateConstructorUsedError; //ingredient usualy follows the pattern of quantity, container and item
 //2 cups of rice
 //1 tablespoon soymilk, preferrably unsweetened
-  List<String> get ingredients =>
+  RecipeIngredients get ingredients =>
       throw _privateConstructorUsedError; //steps or directions
   List<String> get directions => throw _privateConstructorUsedError; //tips
 //should default to empty list when parsing fromjson if key not found
@@ -43,7 +43,7 @@ abstract class $RecipeCopyWith<$Res> {
       RecipeTitle title,
       RecipeCategory category,
       RecipeDescription description,
-      List<String> ingredients,
+      RecipeIngredients ingredients,
       List<String> directions,
       List<String> tips});
 }
@@ -89,7 +89,7 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
       ingredients: null == ingredients
           ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as RecipeIngredients,
       directions: null == directions
           ? _value.directions
           : directions // ignore: cast_nullable_to_non_nullable
@@ -113,7 +113,7 @@ abstract class _$$_RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
       RecipeTitle title,
       RecipeCategory category,
       RecipeDescription description,
-      List<String> ingredients,
+      RecipeIngredients ingredients,
       List<String> directions,
       List<String> tips});
 }
@@ -154,9 +154,9 @@ class __$$_RecipeCopyWithImpl<$Res>
           : description // ignore: cast_nullable_to_non_nullable
               as RecipeDescription,
       ingredients: null == ingredients
-          ? _value._ingredients
+          ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as RecipeIngredients,
       directions: null == directions
           ? _value._directions
           : directions // ignore: cast_nullable_to_non_nullable
@@ -177,11 +177,10 @@ class _$_Recipe implements _Recipe {
       required this.title,
       required this.category,
       required this.description,
-      required final List<String> ingredients,
+      required this.ingredients,
       required final List<String> directions,
       required final List<String> tips})
-      : _ingredients = ingredients,
-        _directions = directions,
+      : _directions = directions,
         _tips = tips;
 
   @override
@@ -195,16 +194,8 @@ class _$_Recipe implements _Recipe {
 //ingredient usualy follows the pattern of quantity, container and item
 //2 cups of rice
 //1 tablespoon soymilk, preferrably unsweetened
-  final List<String> _ingredients;
-//ingredient usualy follows the pattern of quantity, container and item
-//2 cups of rice
-//1 tablespoon soymilk, preferrably unsweetened
   @override
-  List<String> get ingredients {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_ingredients);
-  }
-
+  final RecipeIngredients ingredients;
 //steps or directions
   final List<String> _directions;
 //steps or directions
@@ -241,8 +232,8 @@ class _$_Recipe implements _Recipe {
                 other.category == category) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            const DeepCollectionEquality()
-                .equals(other._ingredients, _ingredients) &&
+            (identical(other.ingredients, ingredients) ||
+                other.ingredients == ingredients) &&
             const DeepCollectionEquality()
                 .equals(other._directions, _directions) &&
             const DeepCollectionEquality().equals(other._tips, _tips));
@@ -255,7 +246,7 @@ class _$_Recipe implements _Recipe {
       title,
       category,
       description,
-      const DeepCollectionEquality().hash(_ingredients),
+      ingredients,
       const DeepCollectionEquality().hash(_directions),
       const DeepCollectionEquality().hash(_tips));
 
@@ -272,7 +263,7 @@ abstract class _Recipe implements Recipe {
       required final RecipeTitle title,
       required final RecipeCategory category,
       required final RecipeDescription description,
-      required final List<String> ingredients,
+      required final RecipeIngredients ingredients,
       required final List<String> directions,
       required final List<String> tips}) = _$_Recipe;
 
@@ -287,7 +278,7 @@ abstract class _Recipe implements Recipe {
   @override //ingredient usualy follows the pattern of quantity, container and item
 //2 cups of rice
 //1 tablespoon soymilk, preferrably unsweetened
-  List<String> get ingredients;
+  RecipeIngredients get ingredients;
   @override //steps or directions
   List<String> get directions;
   @override //tips
