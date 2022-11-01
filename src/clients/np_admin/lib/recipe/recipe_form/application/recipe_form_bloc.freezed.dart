@@ -25,6 +25,9 @@ mixin _$RecipeFormEvent {
     required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
     required TResult Function(EntryItem item, String netText)
         onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +39,9 @@ mixin _$RecipeFormEvent {
     TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult? Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +53,9 @@ mixin _$RecipeFormEvent {
     TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,6 +69,9 @@ mixin _$RecipeFormEvent {
         onRemoveEntryFromIngredients,
     required TResult Function(_OnChangeEntryFromIngredients value)
         onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +84,9 @@ mixin _$RecipeFormEvent {
         onRemoveEntryFromIngredients,
     TResult? Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -84,6 +99,9 @@ mixin _$RecipeFormEvent {
         onRemoveEntryFromIngredients,
     TResult Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -179,6 +197,9 @@ class _$_OnInitialized implements _OnInitialized {
     required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
     required TResult Function(EntryItem item, String netText)
         onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
   }) {
     return onInitialized(initialRecipeOption);
   }
@@ -193,6 +214,9 @@ class _$_OnInitialized implements _OnInitialized {
     TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult? Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
   }) {
     return onInitialized?.call(initialRecipeOption);
   }
@@ -207,6 +231,9 @@ class _$_OnInitialized implements _OnInitialized {
     TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onInitialized != null) {
@@ -226,6 +253,9 @@ class _$_OnInitialized implements _OnInitialized {
         onRemoveEntryFromIngredients,
     required TResult Function(_OnChangeEntryFromIngredients value)
         onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
   }) {
     return onInitialized(this);
   }
@@ -241,6 +271,9 @@ class _$_OnInitialized implements _OnInitialized {
         onRemoveEntryFromIngredients,
     TResult? Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
   }) {
     return onInitialized?.call(this);
   }
@@ -256,6 +289,9 @@ class _$_OnInitialized implements _OnInitialized {
         onRemoveEntryFromIngredients,
     TResult Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onInitialized != null) {
@@ -346,6 +382,9 @@ class _$_OnTitleInput implements _OnTitleInput {
     required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
     required TResult Function(EntryItem item, String netText)
         onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
   }) {
     return onTitleInput(input);
   }
@@ -360,6 +399,9 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult? Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
   }) {
     return onTitleInput?.call(input);
   }
@@ -374,6 +416,9 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onTitleInput != null) {
@@ -393,6 +438,9 @@ class _$_OnTitleInput implements _OnTitleInput {
         onRemoveEntryFromIngredients,
     required TResult Function(_OnChangeEntryFromIngredients value)
         onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
   }) {
     return onTitleInput(this);
   }
@@ -408,6 +456,9 @@ class _$_OnTitleInput implements _OnTitleInput {
         onRemoveEntryFromIngredients,
     TResult? Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
   }) {
     return onTitleInput?.call(this);
   }
@@ -423,6 +474,9 @@ class _$_OnTitleInput implements _OnTitleInput {
         onRemoveEntryFromIngredients,
     TResult Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onTitleInput != null) {
@@ -513,6 +567,9 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
     required TResult Function(EntryItem item, String netText)
         onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
   }) {
     return onCategoryInput(category);
   }
@@ -527,6 +584,9 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult? Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
   }) {
     return onCategoryInput?.call(category);
   }
@@ -541,6 +601,9 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onCategoryInput != null) {
@@ -560,6 +623,9 @@ class _$_OnCategoryInput implements _OnCategoryInput {
         onRemoveEntryFromIngredients,
     required TResult Function(_OnChangeEntryFromIngredients value)
         onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
   }) {
     return onCategoryInput(this);
   }
@@ -575,6 +641,9 @@ class _$_OnCategoryInput implements _OnCategoryInput {
         onRemoveEntryFromIngredients,
     TResult? Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
   }) {
     return onCategoryInput?.call(this);
   }
@@ -590,6 +659,9 @@ class _$_OnCategoryInput implements _OnCategoryInput {
         onRemoveEntryFromIngredients,
     TResult Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onCategoryInput != null) {
@@ -681,6 +753,9 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
     required TResult Function(EntryItem item, String netText)
         onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
   }) {
     return onDescriptionInput(input);
   }
@@ -695,6 +770,9 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult? Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
   }) {
     return onDescriptionInput?.call(input);
   }
@@ -709,6 +787,9 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onDescriptionInput != null) {
@@ -728,6 +809,9 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
         onRemoveEntryFromIngredients,
     required TResult Function(_OnChangeEntryFromIngredients value)
         onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
   }) {
     return onDescriptionInput(this);
   }
@@ -743,6 +827,9 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
         onRemoveEntryFromIngredients,
     TResult? Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
   }) {
     return onDescriptionInput?.call(this);
   }
@@ -758,6 +845,9 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
         onRemoveEntryFromIngredients,
     TResult Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onDescriptionInput != null) {
@@ -850,6 +940,9 @@ class _$_OnRemoveEntryFromIngredients implements _OnRemoveEntryFromIngredients {
     required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
     required TResult Function(EntryItem item, String netText)
         onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
   }) {
     return onRemoveEntryFromIngredients(item);
   }
@@ -864,6 +957,9 @@ class _$_OnRemoveEntryFromIngredients implements _OnRemoveEntryFromIngredients {
     TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult? Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
   }) {
     return onRemoveEntryFromIngredients?.call(item);
   }
@@ -878,6 +974,9 @@ class _$_OnRemoveEntryFromIngredients implements _OnRemoveEntryFromIngredients {
     TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onRemoveEntryFromIngredients != null) {
@@ -897,6 +996,9 @@ class _$_OnRemoveEntryFromIngredients implements _OnRemoveEntryFromIngredients {
         onRemoveEntryFromIngredients,
     required TResult Function(_OnChangeEntryFromIngredients value)
         onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
   }) {
     return onRemoveEntryFromIngredients(this);
   }
@@ -912,6 +1014,9 @@ class _$_OnRemoveEntryFromIngredients implements _OnRemoveEntryFromIngredients {
         onRemoveEntryFromIngredients,
     TResult? Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
   }) {
     return onRemoveEntryFromIngredients?.call(this);
   }
@@ -927,6 +1032,9 @@ class _$_OnRemoveEntryFromIngredients implements _OnRemoveEntryFromIngredients {
         onRemoveEntryFromIngredients,
     TResult Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onRemoveEntryFromIngredients != null) {
@@ -1028,6 +1136,9 @@ class _$_OnChangeEntryFromIngredients implements _OnChangeEntryFromIngredients {
     required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
     required TResult Function(EntryItem item, String netText)
         onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
   }) {
     return onChangeEntryFromIngredients(item, netText);
   }
@@ -1042,6 +1153,9 @@ class _$_OnChangeEntryFromIngredients implements _OnChangeEntryFromIngredients {
     TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult? Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
   }) {
     return onChangeEntryFromIngredients?.call(item, netText);
   }
@@ -1056,6 +1170,9 @@ class _$_OnChangeEntryFromIngredients implements _OnChangeEntryFromIngredients {
     TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
     TResult Function(EntryItem item, String netText)?
         onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onChangeEntryFromIngredients != null) {
@@ -1075,6 +1192,9 @@ class _$_OnChangeEntryFromIngredients implements _OnChangeEntryFromIngredients {
         onRemoveEntryFromIngredients,
     required TResult Function(_OnChangeEntryFromIngredients value)
         onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
   }) {
     return onChangeEntryFromIngredients(this);
   }
@@ -1090,6 +1210,9 @@ class _$_OnChangeEntryFromIngredients implements _OnChangeEntryFromIngredients {
         onRemoveEntryFromIngredients,
     TResult? Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
   }) {
     return onChangeEntryFromIngredients?.call(this);
   }
@@ -1105,6 +1228,9 @@ class _$_OnChangeEntryFromIngredients implements _OnChangeEntryFromIngredients {
         onRemoveEntryFromIngredients,
     TResult Function(_OnChangeEntryFromIngredients value)?
         onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
     required TResult orElse(),
   }) {
     if (onChangeEntryFromIngredients != null) {
@@ -1124,6 +1250,569 @@ abstract class _OnChangeEntryFromIngredients implements RecipeFormEvent {
   @JsonKey(ignore: true)
   _$$_OnChangeEntryFromIngredientsCopyWith<_$_OnChangeEntryFromIngredients>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_OnDirectionInputCopyWith<$Res> {
+  factory _$$_OnDirectionInputCopyWith(
+          _$_OnDirectionInput value, $Res Function(_$_OnDirectionInput) then) =
+      __$$_OnDirectionInputCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index, String input});
+}
+
+/// @nodoc
+class __$$_OnDirectionInputCopyWithImpl<$Res>
+    extends _$RecipeFormEventCopyWithImpl<$Res, _$_OnDirectionInput>
+    implements _$$_OnDirectionInputCopyWith<$Res> {
+  __$$_OnDirectionInputCopyWithImpl(
+      _$_OnDirectionInput _value, $Res Function(_$_OnDirectionInput) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+    Object? input = null,
+  }) {
+    return _then(_$_OnDirectionInput(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == input
+          ? _value.input
+          : input // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnDirectionInput implements _OnDirectionInput {
+  const _$_OnDirectionInput(this.index, this.input);
+
+  @override
+  final int index;
+  @override
+  final String input;
+
+  @override
+  String toString() {
+    return 'RecipeFormEvent.onDirectionInput(index: $index, input: $input)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_OnDirectionInput &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.input, input) || other.input == input));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index, input);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OnDirectionInputCopyWith<_$_OnDirectionInput> get copyWith =>
+      __$$_OnDirectionInputCopyWithImpl<_$_OnDirectionInput>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Recipe> initialRecipeOption) onInitialized,
+    required TResult Function(String input) onTitleInput,
+    required TResult Function(RecipeCategory category) onCategoryInput,
+    required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
+  }) {
+    return onDirectionInput(index, input);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult? Function(String input)? onTitleInput,
+    TResult? Function(RecipeCategory category)? onCategoryInput,
+    TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
+  }) {
+    return onDirectionInput?.call(index, input);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult Function(String input)? onTitleInput,
+    TResult Function(RecipeCategory category)? onCategoryInput,
+    TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
+    required TResult orElse(),
+  }) {
+    if (onDirectionInput != null) {
+      return onDirectionInput(index, input);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnInitialized value) onInitialized,
+    required TResult Function(_OnTitleInput value) onTitleInput,
+    required TResult Function(_OnCategoryInput value) onCategoryInput,
+    required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
+  }) {
+    return onDirectionInput(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnInitialized value)? onInitialized,
+    TResult? Function(_OnTitleInput value)? onTitleInput,
+    TResult? Function(_OnCategoryInput value)? onCategoryInput,
+    TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
+  }) {
+    return onDirectionInput?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnInitialized value)? onInitialized,
+    TResult Function(_OnTitleInput value)? onTitleInput,
+    TResult Function(_OnCategoryInput value)? onCategoryInput,
+    TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
+    required TResult orElse(),
+  }) {
+    if (onDirectionInput != null) {
+      return onDirectionInput(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnDirectionInput implements RecipeFormEvent {
+  const factory _OnDirectionInput(final int index, final String input) =
+      _$_OnDirectionInput;
+
+  int get index;
+  String get input;
+  @JsonKey(ignore: true)
+  _$$_OnDirectionInputCopyWith<_$_OnDirectionInput> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_OnAddDirectionCopyWith<$Res> {
+  factory _$$_OnAddDirectionCopyWith(
+          _$_OnAddDirection value, $Res Function(_$_OnAddDirection) then) =
+      __$$_OnAddDirectionCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
+}
+
+/// @nodoc
+class __$$_OnAddDirectionCopyWithImpl<$Res>
+    extends _$RecipeFormEventCopyWithImpl<$Res, _$_OnAddDirection>
+    implements _$$_OnAddDirectionCopyWith<$Res> {
+  __$$_OnAddDirectionCopyWithImpl(
+      _$_OnAddDirection _value, $Res Function(_$_OnAddDirection) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$_OnAddDirection(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnAddDirection implements _OnAddDirection {
+  const _$_OnAddDirection(this.index);
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'RecipeFormEvent.onAddDirection(index: $index)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_OnAddDirection &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OnAddDirectionCopyWith<_$_OnAddDirection> get copyWith =>
+      __$$_OnAddDirectionCopyWithImpl<_$_OnAddDirection>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Recipe> initialRecipeOption) onInitialized,
+    required TResult Function(String input) onTitleInput,
+    required TResult Function(RecipeCategory category) onCategoryInput,
+    required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
+  }) {
+    return onAddDirection(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult? Function(String input)? onTitleInput,
+    TResult? Function(RecipeCategory category)? onCategoryInput,
+    TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
+  }) {
+    return onAddDirection?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult Function(String input)? onTitleInput,
+    TResult Function(RecipeCategory category)? onCategoryInput,
+    TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
+    required TResult orElse(),
+  }) {
+    if (onAddDirection != null) {
+      return onAddDirection(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnInitialized value) onInitialized,
+    required TResult Function(_OnTitleInput value) onTitleInput,
+    required TResult Function(_OnCategoryInput value) onCategoryInput,
+    required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
+  }) {
+    return onAddDirection(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnInitialized value)? onInitialized,
+    TResult? Function(_OnTitleInput value)? onTitleInput,
+    TResult? Function(_OnCategoryInput value)? onCategoryInput,
+    TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
+  }) {
+    return onAddDirection?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnInitialized value)? onInitialized,
+    TResult Function(_OnTitleInput value)? onTitleInput,
+    TResult Function(_OnCategoryInput value)? onCategoryInput,
+    TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
+    required TResult orElse(),
+  }) {
+    if (onAddDirection != null) {
+      return onAddDirection(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnAddDirection implements RecipeFormEvent {
+  const factory _OnAddDirection(final int index) = _$_OnAddDirection;
+
+  int get index;
+  @JsonKey(ignore: true)
+  _$$_OnAddDirectionCopyWith<_$_OnAddDirection> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_OnRempveDirectionCopyWith<$Res> {
+  factory _$$_OnRempveDirectionCopyWith(_$_OnRempveDirection value,
+          $Res Function(_$_OnRempveDirection) then) =
+      __$$_OnRempveDirectionCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
+}
+
+/// @nodoc
+class __$$_OnRempveDirectionCopyWithImpl<$Res>
+    extends _$RecipeFormEventCopyWithImpl<$Res, _$_OnRempveDirection>
+    implements _$$_OnRempveDirectionCopyWith<$Res> {
+  __$$_OnRempveDirectionCopyWithImpl(
+      _$_OnRempveDirection _value, $Res Function(_$_OnRempveDirection) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$_OnRempveDirection(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnRempveDirection implements _OnRempveDirection {
+  const _$_OnRempveDirection(this.index);
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'RecipeFormEvent.onRempveDirection(index: $index)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_OnRempveDirection &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OnRempveDirectionCopyWith<_$_OnRempveDirection> get copyWith =>
+      __$$_OnRempveDirectionCopyWithImpl<_$_OnRempveDirection>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Recipe> initialRecipeOption) onInitialized,
+    required TResult Function(String input) onTitleInput,
+    required TResult Function(RecipeCategory category) onCategoryInput,
+    required TResult Function(String input) onDescriptionInput,
+    required TResult Function(EntryItem item) onRemoveEntryFromIngredients,
+    required TResult Function(EntryItem item, String netText)
+        onChangeEntryFromIngredients,
+    required TResult Function(int index, String input) onDirectionInput,
+    required TResult Function(int index) onAddDirection,
+    required TResult Function(int index) onRempveDirection,
+  }) {
+    return onRempveDirection(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult? Function(String input)? onTitleInput,
+    TResult? Function(RecipeCategory category)? onCategoryInput,
+    TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult? Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+    TResult? Function(int index, String input)? onDirectionInput,
+    TResult? Function(int index)? onAddDirection,
+    TResult? Function(int index)? onRempveDirection,
+  }) {
+    return onRempveDirection?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult Function(String input)? onTitleInput,
+    TResult Function(RecipeCategory category)? onCategoryInput,
+    TResult Function(String input)? onDescriptionInput,
+    TResult Function(EntryItem item)? onRemoveEntryFromIngredients,
+    TResult Function(EntryItem item, String netText)?
+        onChangeEntryFromIngredients,
+    TResult Function(int index, String input)? onDirectionInput,
+    TResult Function(int index)? onAddDirection,
+    TResult Function(int index)? onRempveDirection,
+    required TResult orElse(),
+  }) {
+    if (onRempveDirection != null) {
+      return onRempveDirection(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnInitialized value) onInitialized,
+    required TResult Function(_OnTitleInput value) onTitleInput,
+    required TResult Function(_OnCategoryInput value) onCategoryInput,
+    required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnRemoveEntryFromIngredients value)
+        onRemoveEntryFromIngredients,
+    required TResult Function(_OnChangeEntryFromIngredients value)
+        onChangeEntryFromIngredients,
+    required TResult Function(_OnDirectionInput value) onDirectionInput,
+    required TResult Function(_OnAddDirection value) onAddDirection,
+    required TResult Function(_OnRempveDirection value) onRempveDirection,
+  }) {
+    return onRempveDirection(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnInitialized value)? onInitialized,
+    TResult? Function(_OnTitleInput value)? onTitleInput,
+    TResult? Function(_OnCategoryInput value)? onCategoryInput,
+    TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult? Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+    TResult? Function(_OnDirectionInput value)? onDirectionInput,
+    TResult? Function(_OnAddDirection value)? onAddDirection,
+    TResult? Function(_OnRempveDirection value)? onRempveDirection,
+  }) {
+    return onRempveDirection?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnInitialized value)? onInitialized,
+    TResult Function(_OnTitleInput value)? onTitleInput,
+    TResult Function(_OnCategoryInput value)? onCategoryInput,
+    TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnRemoveEntryFromIngredients value)?
+        onRemoveEntryFromIngredients,
+    TResult Function(_OnChangeEntryFromIngredients value)?
+        onChangeEntryFromIngredients,
+    TResult Function(_OnDirectionInput value)? onDirectionInput,
+    TResult Function(_OnAddDirection value)? onAddDirection,
+    TResult Function(_OnRempveDirection value)? onRempveDirection,
+    required TResult orElse(),
+  }) {
+    if (onRempveDirection != null) {
+      return onRempveDirection(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnRempveDirection implements RecipeFormEvent {
+  const factory _OnRempveDirection(final int index) = _$_OnRempveDirection;
+
+  int get index;
+  @JsonKey(ignore: true)
+  _$$_OnRempveDirectionCopyWith<_$_OnRempveDirection> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

@@ -67,6 +67,27 @@ class RecipeFormBloc extends Bloc<RecipeFormEvent, RecipeFormState> {
                 .copyWith(ingredients: RecipeIngredients(ingredients.list)),
           ));
         },
+        onAddDirection: (event) {
+          var directions = state.recipe.directions;
+          directions.insert(event.index, '');
+          emit(state.copyWith(
+            recipe: state.recipe.copyWith(directions: directions),
+          ));
+        },
+        onRempveDirection: (event) {
+          var directions = state.recipe.directions;
+          directions.removeAt(event.index);
+          emit(state.copyWith(
+            recipe: state.recipe.copyWith(directions: directions),
+          ));
+        },
+        onDirectionInput: (event) {
+          var directions = state.recipe.directions;
+          directions[event.index] = event.input;
+          emit(state.copyWith(
+            recipe: state.recipe.copyWith(directions: directions),
+          ));
+        },
       );
     });
   }

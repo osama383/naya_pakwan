@@ -210,3 +210,52 @@ class _IngredientsInputState extends State<_IngredientsInput> {
     );
   }
 }
+
+class _DirectionsInput extends StatefulWidget {
+  const _DirectionsInput({super.key});
+
+  @override
+  State<_DirectionsInput> createState() => _DirectionsInputState();
+}
+
+class _DirectionsInputState extends State<_DirectionsInput> {
+  bool isEditing = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<RecipeFormBloc, RecipeFormState>(
+      builder: (context, state) {
+        return Card(
+          child: Column(
+            children: [
+              ListTile(
+                title: const Text('Directions'),
+                trailing: IconButton(
+                  icon: isEditing
+                      ? const Icon(Icons.done)
+                      : const Icon(Icons.edit),
+                  onPressed: () => setState(() => isEditing = !isEditing),
+                ),
+              ),
+              ...state.recipe.directions.map(
+                (e) {
+                  if (!isEditing) {
+                    return Text(e);
+                  }
+                  return TextFormField(
+                    initialValue: e,
+                    onChanged: (input) {
+                      context
+                          .read<RecipeFormBloc>()
+                          .add(RecipeFormEvent.onDirectionInput(1, input));
+                    },
+                  );
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}

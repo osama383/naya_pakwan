@@ -20,5 +20,11 @@ class RecipeFormEvent with _$RecipeFormEvent {
     String netText,
   ) = _OnChangeEntryFromIngredients;
 
+  const factory RecipeFormEvent.onDirectionInput(int index, String input) =
+      _OnDirectionInput;
+  const factory RecipeFormEvent.onAddDirection(int index) = _OnAddDirection;
+  const factory RecipeFormEvent.onRempveDirection(int index) =
+      _OnRempveDirection;
+
   // const factory RecipeFormEvent.onAionInput(String input) = _OnDescriptionInput;
 }
