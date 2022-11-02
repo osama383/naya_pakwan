@@ -16,11 +16,11 @@ class RecipeIngredientsSection extends StatelessWidget {
         const ListTile(
           title: Text('Ingredients'),
         ),
-        ...recipe.ingredients.map((e) => ListTile(
-              title: Text('\u2022 $e'),
-              dense: true,
-              visualDensity: VisualDensity.compact,
-            ))
+        // ...recipe.ingredients.map((e) => ListTile(
+        //       title: Text('\u2022 $e'),
+        //       dense: true,
+        //       visualDensity: VisualDensity.compact,
+        //     ))
       ],
     );
   }

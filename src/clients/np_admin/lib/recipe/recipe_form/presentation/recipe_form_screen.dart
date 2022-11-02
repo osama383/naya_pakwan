@@ -38,6 +38,8 @@ class RecipeFormScreen extends StatelessWidget {
                       _CategoryInput(),
                       SizedBox(height: 16),
                       _IngredientsInput(),
+                      SizedBox(height: 16),
+                      _DirectionsInput(),
                     ],
                   ),
                 ),
@@ -225,6 +227,16 @@ class _DirectionsInputState extends State<_DirectionsInput> {
   Widget build(BuildContext context) {
     return BlocBuilder<RecipeFormBloc, RecipeFormState>(
       builder: (context, state) {
+        List<bool> focusNodes = List.generate(
+          state.recipe.directions.length(),
+          (index) => false,
+        );
+        List<TextEditingController> controllers = List.generate(
+          state.recipe.directions.length(),
+          (index) => TextEditingController(
+              text: state.recipe.directions.toList()[index]),
+        );
+
         return Card(
           child: Column(
             children: [
@@ -237,21 +249,37 @@ class _DirectionsInputState extends State<_DirectionsInput> {
                   onPressed: () => setState(() => isEditing = !isEditing),
                 ),
               ),
-              ...state.recipe.directions.map(
-                (e) {
-                  if (!isEditing) {
-                    return Text(e);
-                  }
-                  return TextFormField(
-                    initialValue: e,
-                    onChanged: (input) {
-                      context
-                          .read<RecipeFormBloc>()
-                          .add(RecipeFormEvent.onDirectionInput(1, input));
-                    },
-                  );
-                },
-              ),
+              for (int i = 0; i < state.recipe.directions.length(); i++)
+                !isEditing
+                    ? ListTile(title: Text(state.recipe.directions.toList()[i]))
+                    : Row(
+                        children: [
+                          Expanded(
+                            child: TextFormField(
+                              readOnly: focusNodes[i],
+                              controller: controllers[i],
+                              // initialValue: state.recipe.directions.toList()[i],
+                              onChanged: (input) {
+                                context.read<RecipeFormBloc>().add(
+                                    RecipeFormEvent.onDirectionInput(i, input));
+                              },
+                            ),
+                          ),
+                          if (state.recipe.directions.toList()[i].isEmpty)
+                            IconButton(
+                              icon: const Icon(Icons.remove),
+                              onPressed: () {
+                                setState(() {
+                                  focusNodes[i] = true;
+                                });
+                                // focusNodes[i + 1].requestFocus();
+                                context
+                                    .read<RecipeFormBloc>()
+                                    .add(RecipeFormEvent.onRempveDirection(i));
+                              },
+                            )
+                        ],
+                      )
             ],
           ),
         );

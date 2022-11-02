@@ -24,7 +24,7 @@ class Recipe with _$Recipe {
     required RecipeIngredients ingredients,
 
     //steps or directions
-    required List<String> directions,
+    required IList<String> directions,
 
     //tips
     //should default to empty list when parsing fromjson if key not found
@@ -40,7 +40,7 @@ class Recipe with _$Recipe {
         category: RecipeCategory.lunchAndDinner,
         description: RecipeDescription.empty(),
         ingredients: RecipeIngredients(LinkedList<EntryItem>()),
-        directions: [],
+        directions: IList.from([]),
         tips: [],
       );
 }
@@ -59,10 +59,11 @@ List<Recipe> dummyRecipes = [
         EntryItem('1 teaspoon Sugar'),
         EntryItem('1 cup of Rice'),
       ])),
-    directions: [
+    directions: IList.from([
       'Mash banana in a bowl with a fork and add other ingredients and stir well. Cover and leave in refrigerator overnight.',
-      'The next day, just stir and enjoy. You can eat it cold, or warm  it up.'
-    ],
+      'The next day, just stir and enjoy. You can eat it cold, or warm  it up.',
+      'hjsdvjcvsdjvjh'
+    ]),
     tips: [],
   ),
   Recipe(
@@ -72,7 +73,7 @@ List<Recipe> dummyRecipes = [
     description: RecipeDescription(
         'This protein-packed breakfast option is great because the prep work is done the night before. All you need to do is wake up and enjoy.'),
     ingredients: RecipeIngredients(LinkedList<EntryItem>()),
-    directions: [],
+    directions: IList.from([]),
     tips: [],
   ),
 ];

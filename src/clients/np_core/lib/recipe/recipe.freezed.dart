@@ -25,7 +25,7 @@ mixin _$Recipe {
 //1 tablespoon soymilk, preferrably unsweetened
   RecipeIngredients get ingredients =>
       throw _privateConstructorUsedError; //steps or directions
-  List<String> get directions => throw _privateConstructorUsedError; //tips
+  IList<String> get directions => throw _privateConstructorUsedError; //tips
 //should default to empty list when parsing fromjson if key not found
   List<String> get tips => throw _privateConstructorUsedError;
 
@@ -44,7 +44,7 @@ abstract class $RecipeCopyWith<$Res> {
       RecipeCategory category,
       RecipeDescription description,
       RecipeIngredients ingredients,
-      List<String> directions,
+      IList<String> directions,
       List<String> tips});
 }
 
@@ -93,7 +93,7 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
       directions: null == directions
           ? _value.directions
           : directions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as IList<String>,
       tips: null == tips
           ? _value.tips
           : tips // ignore: cast_nullable_to_non_nullable
@@ -114,7 +114,7 @@ abstract class _$$_RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
       RecipeCategory category,
       RecipeDescription description,
       RecipeIngredients ingredients,
-      List<String> directions,
+      IList<String> directions,
       List<String> tips});
 }
 
@@ -158,9 +158,9 @@ class __$$_RecipeCopyWithImpl<$Res>
           : ingredients // ignore: cast_nullable_to_non_nullable
               as RecipeIngredients,
       directions: null == directions
-          ? _value._directions
+          ? _value.directions
           : directions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as IList<String>,
       tips: null == tips
           ? _value._tips
           : tips // ignore: cast_nullable_to_non_nullable
@@ -178,10 +178,9 @@ class _$_Recipe implements _Recipe {
       required this.category,
       required this.description,
       required this.ingredients,
-      required final List<String> directions,
+      required this.directions,
       required final List<String> tips})
-      : _directions = directions,
-        _tips = tips;
+      : _tips = tips;
 
   @override
   final UniqueId id;
@@ -197,14 +196,8 @@ class _$_Recipe implements _Recipe {
   @override
   final RecipeIngredients ingredients;
 //steps or directions
-  final List<String> _directions;
-//steps or directions
   @override
-  List<String> get directions {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_directions);
-  }
-
+  final IList<String> directions;
 //tips
 //should default to empty list when parsing fromjson if key not found
   final List<String> _tips;
@@ -234,21 +227,14 @@ class _$_Recipe implements _Recipe {
                 other.description == description) &&
             (identical(other.ingredients, ingredients) ||
                 other.ingredients == ingredients) &&
-            const DeepCollectionEquality()
-                .equals(other._directions, _directions) &&
+            (identical(other.directions, directions) ||
+                other.directions == directions) &&
             const DeepCollectionEquality().equals(other._tips, _tips));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      title,
-      category,
-      description,
-      ingredients,
-      const DeepCollectionEquality().hash(_directions),
-      const DeepCollectionEquality().hash(_tips));
+  int get hashCode => Object.hash(runtimeType, id, title, category, description,
+      ingredients, directions, const DeepCollectionEquality().hash(_tips));
 
   @JsonKey(ignore: true)
   @override
@@ -264,7 +250,7 @@ abstract class _Recipe implements Recipe {
       required final RecipeCategory category,
       required final RecipeDescription description,
       required final RecipeIngredients ingredients,
-      required final List<String> directions,
+      required final IList<String> directions,
       required final List<String> tips}) = _$_Recipe;
 
   @override
@@ -280,7 +266,7 @@ abstract class _Recipe implements Recipe {
 //1 tablespoon soymilk, preferrably unsweetened
   RecipeIngredients get ingredients;
   @override //steps or directions
-  List<String> get directions;
+  IList<String> get directions;
   @override //tips
 //should default to empty list when parsing fromjson if key not found
   List<String> get tips;

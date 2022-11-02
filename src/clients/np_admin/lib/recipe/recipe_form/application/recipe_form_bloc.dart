@@ -68,24 +68,24 @@ class RecipeFormBloc extends Bloc<RecipeFormEvent, RecipeFormState> {
           ));
         },
         onAddDirection: (event) {
-          var directions = state.recipe.directions;
+          var directions = state.recipe.directions.toList();
           directions.insert(event.index, '');
           emit(state.copyWith(
-            recipe: state.recipe.copyWith(directions: directions),
+            recipe: state.recipe.copyWith(directions: IList.from(directions)),
           ));
         },
         onRempveDirection: (event) {
-          var directions = state.recipe.directions;
+          var directions = state.recipe.directions.toList();
           directions.removeAt(event.index);
           emit(state.copyWith(
-            recipe: state.recipe.copyWith(directions: directions),
+            recipe: state.recipe.copyWith(directions: IList.from(directions)),
           ));
         },
         onDirectionInput: (event) {
-          var directions = state.recipe.directions;
+          var directions = state.recipe.directions.toList();
           directions[event.index] = event.input;
           emit(state.copyWith(
-            recipe: state.recipe.copyWith(directions: directions),
+            recipe: state.recipe.copyWith(directions: IList.from(directions)),
           ));
         },
       );
