@@ -42,52 +42,55 @@ class RecipeFormBloc extends Bloc<RecipeFormEvent, RecipeFormState> {
             recipe: state.recipe.copyWith(category: event.category),
           ));
         },
-        onRemoveEntryFromIngredients: (event) {
-          var ingredients = state.recipe.ingredients;
-          ingredients.list.remove(event.item);
-          emit(state.copyWith(
-            recipe: state.recipe
-                .copyWith(ingredients: RecipeIngredients(ingredients.list)),
-          ));
-        },
-        onChangeEntryFromIngredients: (event) {
-          var ingredients = state.recipe.ingredients;
-          final newEntry = EntryItem(event.netText);
+        // onRemoveEntryFromIngredients: (event) {
+        //   var ingredients = state.recipe.ingredients;
+        //   ingredients.list.remove(event.item);
+        //   emit(state.copyWith(
+        //     recipe: state.recipe
+        //         .copyWith(ingredients: RecipeIngredients(ingredients.list)),
+        //   ));
+        // },
+        // onChangeEntryFromIngredients: (event) {
+        //   var ingredients = state.recipe.ingredients;
+        //   final newEntry = EntryItem(event.netText);
 
-          EntryItem? currentNode = ingredients.list.first;
-          while (currentNode!.next != event.item) {
-            currentNode = currentNode.next;
-          }
-          ingredients.list.remove(event.item);
-          currentNode.insertAfter(newEntry);
+        //   EntryItem? currentNode = ingredients.list.first;
+        //   while (currentNode!.next != event.item) {
+        //     currentNode = currentNode.next;
+        //   }
+        //   ingredients.list.remove(event.item);
+        //   currentNode.insertAfter(newEntry);
 
-          // ingredients.list.elementAt(1).insertAfter(newEntry);
-          emit(state.copyWith(
-            recipe: state.recipe
-                .copyWith(ingredients: RecipeIngredients(ingredients.list)),
-          ));
-        },
-        onAddDirection: (event) {
-          var directions = state.recipe.directions.toList();
-          directions.insert(event.index, '');
-          emit(state.copyWith(
-            recipe: state.recipe.copyWith(directions: IList.from(directions)),
-          ));
-        },
-        onRempveDirection: (event) {
-          var directions = state.recipe.directions.toList();
-          directions.removeAt(event.index);
-          emit(state.copyWith(
-            recipe: state.recipe.copyWith(directions: IList.from(directions)),
-          ));
-        },
-        onDirectionInput: (event) {
-          var directions = state.recipe.directions.toList();
-          directions[event.index] = event.input;
-          emit(state.copyWith(
-            recipe: state.recipe.copyWith(directions: IList.from(directions)),
-          ));
-        },
+        //   // ingredients.list.elementAt(1).insertAfter(newEntry);
+        //   emit(state.copyWith(
+        //     recipe: state.recipe
+        //         .copyWith(ingredients: RecipeIngredients(ingredients.list)),
+        //   ));
+        // },
+        // onAddDirection: (event) {
+        //   var directions = state.recipe.directions.toList();
+        //   directions.add(' ');
+        //   emit(state.copyWith(
+        //     recipe: state.recipe.copyWith(directions: IList.from(directions)),
+        //   ));
+        // },
+        // onRempveDirection: (event) {
+        //   var directions = state.recipe.directions.toList();
+        //   directions.removeAt(event.index);
+        //   emit(state.copyWith(
+        //     recipe: state.recipe.copyWith(directions: IList.from(directions)),
+        //   ));
+        // },
+        // onToggleEditingDirections: (event) {
+        //   emit(state.copyWith(editingDirections: !state.editingDirections));
+        // },
+        // onDirectionInput: (event) {
+        //   var directions = state.recipe.directions.toList();
+        //   directions[event.index] = event.input;
+        //   emit(state.copyWith(
+        //     recipe: state.recipe.copyWith(directions: IList.from(directions)),
+        //   ));
+        // },
       );
     });
   }

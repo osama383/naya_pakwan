@@ -5,6 +5,7 @@ class RecipeFormState with _$RecipeFormState {
   const factory RecipeFormState({
     required Recipe recipe,
     required bool isEditing,
+    required bool editingDirections,
     required bool showErrors,
     required bool submissionInProgress,
     required Option<Either<Unit, Unit>> resultOption,
@@ -13,6 +14,7 @@ class RecipeFormState with _$RecipeFormState {
   factory RecipeFormState.initial() => _RecipeFormState(
         recipe: Recipe.initial(),
         isEditing: false,
+        editingDirections: false,
         showErrors: false,
         submissionInProgress: false,
         resultOption: none(),

@@ -2,6 +2,9 @@ import 'package:dartz/dartz.dart' as dartz;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:injectable/injectable.dart';
+import 'package:np_admin/common/presentation/edit_list/bloc/edit_list_bloc.dart';
+import 'package:np_admin/common/presentation/edit_list/presentation/edit_list.dart';
 import 'package:np_admin/injection.dart';
 import 'package:np_admin/recipe/recipe_form/application/recipe_form_bloc.dart';
 import 'package:np_core/recipe/recipe.dart';
@@ -36,8 +39,8 @@ class RecipeFormScreen extends StatelessWidget {
                       _DescriptionInput(),
                       SizedBox(height: 16),
                       _CategoryInput(),
-                      SizedBox(height: 16),
-                      _IngredientsInput(),
+                      // SizedBox(height: 16),
+                      // _IngredientsInput(),
                       SizedBox(height: 16),
                       _DirectionsInput(),
                     ],
@@ -138,150 +141,95 @@ class _CategoryInput extends HookWidget {
   }
 }
 
-class _IngredientsInput extends StatefulWidget {
-  const _IngredientsInput({super.key});
+// class _IngredientsInput extends StatefulWidget {
+//   const _IngredientsInput({super.key});
 
-  @override
-  State<_IngredientsInput> createState() => _IngredientsInputState();
-}
+//   @override
+//   State<_IngredientsInput> createState() => _IngredientsInputState();
+// }
 
-class _IngredientsInputState extends State<_IngredientsInput> {
-  bool isEditing = false;
+// class _IngredientsInputState extends State<_IngredientsInput> {
+//   bool isEditing = false;
 
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<RecipeFormBloc, RecipeFormState>(
-      // buildWhen: (prev, curr) =>
-      //     prev.recipe.ingredients != curr.recipe.ingredients,
-      builder: (context, state) {
-        print('building ingredients list');
-        state.recipe.ingredients.list.forEach((entry) {
-          print(entry.text);
-        });
-        return Card(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ListTile(
-                title: const Text('Ingredients'),
-                trailing: IconButton(
-                  onPressed: () => setState(() => isEditing = !isEditing),
-                  icon: isEditing
-                      ? const Icon(Icons.done)
-                      : const Icon(Icons.edit),
-                ),
-              ),
-              ...state.recipe.ingredients.list.map((e) {
-                if (isEditing) {
-                  return Row(
-                    children: [
-                      Expanded(
-                        child: TextFormField(
-                          initialValue: e.text,
-                          // decoration:
-                          //     const InputDecoration(label: Text(e.id.toString())),
-                          onChanged: (input) => context
-                              .read<RecipeFormBloc>()
-                              .add(RecipeFormEvent.onChangeEntryFromIngredients(
-                                  e, input)),
-                          // validator: (_) => state.recipe.description.value.fold(
-                          //   (l) => 'Invalid',
-                          //   (r) => null,
-                          // ),
-                        ),
-                      ),
-                      IconButton(
-                        icon: const Icon(Icons.remove),
-                        onPressed: () {
-                          context.read<RecipeFormBloc>().add(
-                              RecipeFormEvent.onRemoveEntryFromIngredients(e));
-                        },
-                      ),
-                    ],
-                  );
-                }
-                return ListTile(
-                  title: Text(e.text),
-                  dense: true,
-                );
-              }).toList(),
-            ],
-          ),
-        );
-      },
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocBuilder<RecipeFormBloc, RecipeFormState>(
+//       // buildWhen: (prev, curr) =>
+//       //     prev.recipe.ingredients != curr.recipe.ingredients,
+//       builder: (context, state) {
+//         // print('building ingredients list');
+//         // state.recipe.ingredients.list.forEach((entry) {
+//         //   print(entry.text);
+//         // });
+//         return Card(
+//           child: Column(
+//             crossAxisAlignment: CrossAxisAlignment.start,
+//             children: [
+//               ListTile(
+//                 title: const Text('Ingredients'),
+//                 trailing: IconButton(
+//                   onPressed: () => setState(() => isEditing = !isEditing),
+//                   icon: isEditing
+//                       ? const Icon(Icons.done)
+//                       : const Icon(Icons.edit),
+//                 ),
+//               ),
+//               ...state.recipe.ingredients.list.map((e) {
+//                 if (isEditing) {
+//                   return Row(
+//                     children: [
+//                       Expanded(
+//                         child: TextFormField(
+//                           initialValue: e.text,
+//                           // decoration:
+//                           //     const InputDecoration(label: Text(e.id.toString())),
+//                           onChanged: (input) => context
+//                               .read<RecipeFormBloc>()
+//                               .add(RecipeFormEvent.onChangeEntryFromIngredients(
+//                                   e, input)),
+//                           // validator: (_) => state.recipe.description.value.fold(
+//                           //   (l) => 'Invalid',
+//                           //   (r) => null,
+//                           // ),
+//                         ),
+//                       ),
+//                       IconButton(
+//                         icon: const Icon(Icons.remove),
+//                         onPressed: () {
+//                           context.read<RecipeFormBloc>().add(
+//                               RecipeFormEvent.onRemoveEntryFromIngredients(e));
+//                         },
+//                       ),
+//                     ],
+//                   );
+//                 }
+//                 return ListTile(
+//                   title: Text(e.text),
+//                   dense: true,
+//                 );
+//               }).toList(),
+//             ],
+//           ),
+//         );
+//       },
+//     );
+//   }
+// }
 
-class _DirectionsInput extends StatefulWidget {
+class _DirectionsInput extends StatelessWidget {
   const _DirectionsInput({super.key});
 
   @override
-  State<_DirectionsInput> createState() => _DirectionsInputState();
-}
-
-class _DirectionsInputState extends State<_DirectionsInput> {
-  bool isEditing = false;
-
-  @override
   Widget build(BuildContext context) {
     return BlocBuilder<RecipeFormBloc, RecipeFormState>(
+      buildWhen: (prev, curr) =>
+          prev.recipe.directions.length() != curr.recipe.directions.length(),
       builder: (context, state) {
-        List<bool> focusNodes = List.generate(
-          state.recipe.directions.length(),
-          (index) => false,
-        );
-        List<TextEditingController> controllers = List.generate(
-          state.recipe.directions.length(),
-          (index) => TextEditingController(
-              text: state.recipe.directions.toList()[index]),
-        );
-
-        return Card(
-          child: Column(
-            children: [
-              ListTile(
-                title: const Text('Directions'),
-                trailing: IconButton(
-                  icon: isEditing
-                      ? const Icon(Icons.done)
-                      : const Icon(Icons.edit),
-                  onPressed: () => setState(() => isEditing = !isEditing),
-                ),
-              ),
-              for (int i = 0; i < state.recipe.directions.length(); i++)
-                !isEditing
-                    ? ListTile(title: Text(state.recipe.directions.toList()[i]))
-                    : Row(
-                        children: [
-                          Expanded(
-                            child: TextFormField(
-                              readOnly: focusNodes[i],
-                              controller: controllers[i],
-                              // initialValue: state.recipe.directions.toList()[i],
-                              onChanged: (input) {
-                                context.read<RecipeFormBloc>().add(
-                                    RecipeFormEvent.onDirectionInput(i, input));
-                              },
-                            ),
-                          ),
-                          if (state.recipe.directions.toList()[i].isEmpty)
-                            IconButton(
-                              icon: const Icon(Icons.remove),
-                              onPressed: () {
-                                setState(() {
-                                  focusNodes[i] = true;
-                                });
-                                // focusNodes[i + 1].requestFocus();
-                                context
-                                    .read<RecipeFormBloc>()
-                                    .add(RecipeFormEvent.onRempveDirection(i));
-                              },
-                            )
-                        ],
-                      )
-            ],
-          ),
+        print(state.recipe.directions.length());
+        var bloc = EditListBloc(() {}, state.recipe.directions);
+        return BlocProvider.value(
+          value: bloc,
+          child: EditList(),
         );
       },
     );
