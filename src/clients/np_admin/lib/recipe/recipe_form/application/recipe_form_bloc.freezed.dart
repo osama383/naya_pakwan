@@ -22,6 +22,8 @@ mixin _$RecipeFormEvent {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(IList<String> directions) onDirectionsInput,
+    required TResult Function(IList<String> ingredients) onIngredientsInput,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$RecipeFormEvent {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(IList<String> directions)? onDirectionsInput,
+    TResult? Function(IList<String> ingredients)? onIngredientsInput,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$RecipeFormEvent {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(IList<String> directions)? onDirectionsInput,
+    TResult Function(IList<String> ingredients)? onIngredientsInput,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +53,8 @@ mixin _$RecipeFormEvent {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnDirectionsInput value) onDirectionsInput,
+    required TResult Function(_OnIngredientsInput value) onIngredientsInput,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +63,8 @@ mixin _$RecipeFormEvent {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult? Function(_OnIngredientsInput value)? onIngredientsInput,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +73,8 @@ mixin _$RecipeFormEvent {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult Function(_OnIngredientsInput value)? onIngredientsInput,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -155,6 +167,8 @@ class _$_OnInitialized implements _OnInitialized {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(IList<String> directions) onDirectionsInput,
+    required TResult Function(IList<String> ingredients) onIngredientsInput,
   }) {
     return onInitialized(initialRecipeOption);
   }
@@ -166,6 +180,8 @@ class _$_OnInitialized implements _OnInitialized {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(IList<String> directions)? onDirectionsInput,
+    TResult? Function(IList<String> ingredients)? onIngredientsInput,
   }) {
     return onInitialized?.call(initialRecipeOption);
   }
@@ -177,6 +193,8 @@ class _$_OnInitialized implements _OnInitialized {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(IList<String> directions)? onDirectionsInput,
+    TResult Function(IList<String> ingredients)? onIngredientsInput,
     required TResult orElse(),
   }) {
     if (onInitialized != null) {
@@ -192,6 +210,8 @@ class _$_OnInitialized implements _OnInitialized {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnDirectionsInput value) onDirectionsInput,
+    required TResult Function(_OnIngredientsInput value) onIngredientsInput,
   }) {
     return onInitialized(this);
   }
@@ -203,6 +223,8 @@ class _$_OnInitialized implements _OnInitialized {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult? Function(_OnIngredientsInput value)? onIngredientsInput,
   }) {
     return onInitialized?.call(this);
   }
@@ -214,6 +236,8 @@ class _$_OnInitialized implements _OnInitialized {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult Function(_OnIngredientsInput value)? onIngredientsInput,
     required TResult orElse(),
   }) {
     if (onInitialized != null) {
@@ -301,6 +325,8 @@ class _$_OnTitleInput implements _OnTitleInput {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(IList<String> directions) onDirectionsInput,
+    required TResult Function(IList<String> ingredients) onIngredientsInput,
   }) {
     return onTitleInput(input);
   }
@@ -312,6 +338,8 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(IList<String> directions)? onDirectionsInput,
+    TResult? Function(IList<String> ingredients)? onIngredientsInput,
   }) {
     return onTitleInput?.call(input);
   }
@@ -323,6 +351,8 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(IList<String> directions)? onDirectionsInput,
+    TResult Function(IList<String> ingredients)? onIngredientsInput,
     required TResult orElse(),
   }) {
     if (onTitleInput != null) {
@@ -338,6 +368,8 @@ class _$_OnTitleInput implements _OnTitleInput {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnDirectionsInput value) onDirectionsInput,
+    required TResult Function(_OnIngredientsInput value) onIngredientsInput,
   }) {
     return onTitleInput(this);
   }
@@ -349,6 +381,8 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult? Function(_OnIngredientsInput value)? onIngredientsInput,
   }) {
     return onTitleInput?.call(this);
   }
@@ -360,6 +394,8 @@ class _$_OnTitleInput implements _OnTitleInput {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult Function(_OnIngredientsInput value)? onIngredientsInput,
     required TResult orElse(),
   }) {
     if (onTitleInput != null) {
@@ -447,6 +483,8 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(IList<String> directions) onDirectionsInput,
+    required TResult Function(IList<String> ingredients) onIngredientsInput,
   }) {
     return onCategoryInput(category);
   }
@@ -458,6 +496,8 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(IList<String> directions)? onDirectionsInput,
+    TResult? Function(IList<String> ingredients)? onIngredientsInput,
   }) {
     return onCategoryInput?.call(category);
   }
@@ -469,6 +509,8 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(IList<String> directions)? onDirectionsInput,
+    TResult Function(IList<String> ingredients)? onIngredientsInput,
     required TResult orElse(),
   }) {
     if (onCategoryInput != null) {
@@ -484,6 +526,8 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnDirectionsInput value) onDirectionsInput,
+    required TResult Function(_OnIngredientsInput value) onIngredientsInput,
   }) {
     return onCategoryInput(this);
   }
@@ -495,6 +539,8 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult? Function(_OnIngredientsInput value)? onIngredientsInput,
   }) {
     return onCategoryInput?.call(this);
   }
@@ -506,6 +552,8 @@ class _$_OnCategoryInput implements _OnCategoryInput {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult Function(_OnIngredientsInput value)? onIngredientsInput,
     required TResult orElse(),
   }) {
     if (onCategoryInput != null) {
@@ -594,6 +642,8 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     required TResult Function(String input) onTitleInput,
     required TResult Function(RecipeCategory category) onCategoryInput,
     required TResult Function(String input) onDescriptionInput,
+    required TResult Function(IList<String> directions) onDirectionsInput,
+    required TResult Function(IList<String> ingredients) onIngredientsInput,
   }) {
     return onDescriptionInput(input);
   }
@@ -605,6 +655,8 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult? Function(String input)? onTitleInput,
     TResult? Function(RecipeCategory category)? onCategoryInput,
     TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(IList<String> directions)? onDirectionsInput,
+    TResult? Function(IList<String> ingredients)? onIngredientsInput,
   }) {
     return onDescriptionInput?.call(input);
   }
@@ -616,6 +668,8 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult Function(String input)? onTitleInput,
     TResult Function(RecipeCategory category)? onCategoryInput,
     TResult Function(String input)? onDescriptionInput,
+    TResult Function(IList<String> directions)? onDirectionsInput,
+    TResult Function(IList<String> ingredients)? onIngredientsInput,
     required TResult orElse(),
   }) {
     if (onDescriptionInput != null) {
@@ -631,6 +685,8 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     required TResult Function(_OnTitleInput value) onTitleInput,
     required TResult Function(_OnCategoryInput value) onCategoryInput,
     required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnDirectionsInput value) onDirectionsInput,
+    required TResult Function(_OnIngredientsInput value) onIngredientsInput,
   }) {
     return onDescriptionInput(this);
   }
@@ -642,6 +698,8 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult? Function(_OnTitleInput value)? onTitleInput,
     TResult? Function(_OnCategoryInput value)? onCategoryInput,
     TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult? Function(_OnIngredientsInput value)? onIngredientsInput,
   }) {
     return onDescriptionInput?.call(this);
   }
@@ -653,6 +711,8 @@ class _$_OnDescriptionInput implements _OnDescriptionInput {
     TResult Function(_OnTitleInput value)? onTitleInput,
     TResult Function(_OnCategoryInput value)? onCategoryInput,
     TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult Function(_OnIngredientsInput value)? onIngredientsInput,
     required TResult orElse(),
   }) {
     if (onDescriptionInput != null) {
@@ -668,6 +728,326 @@ abstract class _OnDescriptionInput implements RecipeFormEvent {
   String get input;
   @JsonKey(ignore: true)
   _$$_OnDescriptionInputCopyWith<_$_OnDescriptionInput> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_OnDirectionsInputCopyWith<$Res> {
+  factory _$$_OnDirectionsInputCopyWith(_$_OnDirectionsInput value,
+          $Res Function(_$_OnDirectionsInput) then) =
+      __$$_OnDirectionsInputCopyWithImpl<$Res>;
+  @useResult
+  $Res call({IList<String> directions});
+}
+
+/// @nodoc
+class __$$_OnDirectionsInputCopyWithImpl<$Res>
+    extends _$RecipeFormEventCopyWithImpl<$Res, _$_OnDirectionsInput>
+    implements _$$_OnDirectionsInputCopyWith<$Res> {
+  __$$_OnDirectionsInputCopyWithImpl(
+      _$_OnDirectionsInput _value, $Res Function(_$_OnDirectionsInput) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? directions = null,
+  }) {
+    return _then(_$_OnDirectionsInput(
+      null == directions
+          ? _value.directions
+          : directions // ignore: cast_nullable_to_non_nullable
+              as IList<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnDirectionsInput implements _OnDirectionsInput {
+  const _$_OnDirectionsInput(this.directions);
+
+  @override
+  final IList<String> directions;
+
+  @override
+  String toString() {
+    return 'RecipeFormEvent.onDirectionsInput(directions: $directions)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_OnDirectionsInput &&
+            (identical(other.directions, directions) ||
+                other.directions == directions));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, directions);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OnDirectionsInputCopyWith<_$_OnDirectionsInput> get copyWith =>
+      __$$_OnDirectionsInputCopyWithImpl<_$_OnDirectionsInput>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Recipe> initialRecipeOption) onInitialized,
+    required TResult Function(String input) onTitleInput,
+    required TResult Function(RecipeCategory category) onCategoryInput,
+    required TResult Function(String input) onDescriptionInput,
+    required TResult Function(IList<String> directions) onDirectionsInput,
+    required TResult Function(IList<String> ingredients) onIngredientsInput,
+  }) {
+    return onDirectionsInput(directions);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult? Function(String input)? onTitleInput,
+    TResult? Function(RecipeCategory category)? onCategoryInput,
+    TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(IList<String> directions)? onDirectionsInput,
+    TResult? Function(IList<String> ingredients)? onIngredientsInput,
+  }) {
+    return onDirectionsInput?.call(directions);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult Function(String input)? onTitleInput,
+    TResult Function(RecipeCategory category)? onCategoryInput,
+    TResult Function(String input)? onDescriptionInput,
+    TResult Function(IList<String> directions)? onDirectionsInput,
+    TResult Function(IList<String> ingredients)? onIngredientsInput,
+    required TResult orElse(),
+  }) {
+    if (onDirectionsInput != null) {
+      return onDirectionsInput(directions);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnInitialized value) onInitialized,
+    required TResult Function(_OnTitleInput value) onTitleInput,
+    required TResult Function(_OnCategoryInput value) onCategoryInput,
+    required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnDirectionsInput value) onDirectionsInput,
+    required TResult Function(_OnIngredientsInput value) onIngredientsInput,
+  }) {
+    return onDirectionsInput(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnInitialized value)? onInitialized,
+    TResult? Function(_OnTitleInput value)? onTitleInput,
+    TResult? Function(_OnCategoryInput value)? onCategoryInput,
+    TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult? Function(_OnIngredientsInput value)? onIngredientsInput,
+  }) {
+    return onDirectionsInput?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnInitialized value)? onInitialized,
+    TResult Function(_OnTitleInput value)? onTitleInput,
+    TResult Function(_OnCategoryInput value)? onCategoryInput,
+    TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult Function(_OnIngredientsInput value)? onIngredientsInput,
+    required TResult orElse(),
+  }) {
+    if (onDirectionsInput != null) {
+      return onDirectionsInput(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnDirectionsInput implements RecipeFormEvent {
+  const factory _OnDirectionsInput(final IList<String> directions) =
+      _$_OnDirectionsInput;
+
+  IList<String> get directions;
+  @JsonKey(ignore: true)
+  _$$_OnDirectionsInputCopyWith<_$_OnDirectionsInput> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_OnIngredientsInputCopyWith<$Res> {
+  factory _$$_OnIngredientsInputCopyWith(_$_OnIngredientsInput value,
+          $Res Function(_$_OnIngredientsInput) then) =
+      __$$_OnIngredientsInputCopyWithImpl<$Res>;
+  @useResult
+  $Res call({IList<String> ingredients});
+}
+
+/// @nodoc
+class __$$_OnIngredientsInputCopyWithImpl<$Res>
+    extends _$RecipeFormEventCopyWithImpl<$Res, _$_OnIngredientsInput>
+    implements _$$_OnIngredientsInputCopyWith<$Res> {
+  __$$_OnIngredientsInputCopyWithImpl(
+      _$_OnIngredientsInput _value, $Res Function(_$_OnIngredientsInput) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? ingredients = null,
+  }) {
+    return _then(_$_OnIngredientsInput(
+      null == ingredients
+          ? _value.ingredients
+          : ingredients // ignore: cast_nullable_to_non_nullable
+              as IList<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnIngredientsInput implements _OnIngredientsInput {
+  const _$_OnIngredientsInput(this.ingredients);
+
+  @override
+  final IList<String> ingredients;
+
+  @override
+  String toString() {
+    return 'RecipeFormEvent.onIngredientsInput(ingredients: $ingredients)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_OnIngredientsInput &&
+            (identical(other.ingredients, ingredients) ||
+                other.ingredients == ingredients));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, ingredients);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OnIngredientsInputCopyWith<_$_OnIngredientsInput> get copyWith =>
+      __$$_OnIngredientsInputCopyWithImpl<_$_OnIngredientsInput>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Recipe> initialRecipeOption) onInitialized,
+    required TResult Function(String input) onTitleInput,
+    required TResult Function(RecipeCategory category) onCategoryInput,
+    required TResult Function(String input) onDescriptionInput,
+    required TResult Function(IList<String> directions) onDirectionsInput,
+    required TResult Function(IList<String> ingredients) onIngredientsInput,
+  }) {
+    return onIngredientsInput(ingredients);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult? Function(String input)? onTitleInput,
+    TResult? Function(RecipeCategory category)? onCategoryInput,
+    TResult? Function(String input)? onDescriptionInput,
+    TResult? Function(IList<String> directions)? onDirectionsInput,
+    TResult? Function(IList<String> ingredients)? onIngredientsInput,
+  }) {
+    return onIngredientsInput?.call(ingredients);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? onInitialized,
+    TResult Function(String input)? onTitleInput,
+    TResult Function(RecipeCategory category)? onCategoryInput,
+    TResult Function(String input)? onDescriptionInput,
+    TResult Function(IList<String> directions)? onDirectionsInput,
+    TResult Function(IList<String> ingredients)? onIngredientsInput,
+    required TResult orElse(),
+  }) {
+    if (onIngredientsInput != null) {
+      return onIngredientsInput(ingredients);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnInitialized value) onInitialized,
+    required TResult Function(_OnTitleInput value) onTitleInput,
+    required TResult Function(_OnCategoryInput value) onCategoryInput,
+    required TResult Function(_OnDescriptionInput value) onDescriptionInput,
+    required TResult Function(_OnDirectionsInput value) onDirectionsInput,
+    required TResult Function(_OnIngredientsInput value) onIngredientsInput,
+  }) {
+    return onIngredientsInput(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnInitialized value)? onInitialized,
+    TResult? Function(_OnTitleInput value)? onTitleInput,
+    TResult? Function(_OnCategoryInput value)? onCategoryInput,
+    TResult? Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult? Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult? Function(_OnIngredientsInput value)? onIngredientsInput,
+  }) {
+    return onIngredientsInput?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnInitialized value)? onInitialized,
+    TResult Function(_OnTitleInput value)? onTitleInput,
+    TResult Function(_OnCategoryInput value)? onCategoryInput,
+    TResult Function(_OnDescriptionInput value)? onDescriptionInput,
+    TResult Function(_OnDirectionsInput value)? onDirectionsInput,
+    TResult Function(_OnIngredientsInput value)? onIngredientsInput,
+    required TResult orElse(),
+  }) {
+    if (onIngredientsInput != null) {
+      return onIngredientsInput(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnIngredientsInput implements RecipeFormEvent {
+  const factory _OnIngredientsInput(final IList<String> ingredients) =
+      _$_OnIngredientsInput;
+
+  IList<String> get ingredients;
+  @JsonKey(ignore: true)
+  _$$_OnIngredientsInputCopyWith<_$_OnIngredientsInput> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

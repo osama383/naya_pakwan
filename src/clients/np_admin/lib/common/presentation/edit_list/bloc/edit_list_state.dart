@@ -3,16 +3,14 @@ part of 'edit_list_bloc.dart';
 @freezed
 class EditListState with _$EditListState {
   const factory EditListState({
+    required String title,
     required IList<String> list,
-    required bool isEditing,
   }) = _EditListState;
 
-  factory EditListState.initial(IList<String> list) {
-    print('inside state');
-    print(list.length());
+  factory EditListState.initial(String title, IList<String> list) {
     return _EditListState(
+      title: title,
       list: list,
-      isEditing: false,
     );
   }
 }

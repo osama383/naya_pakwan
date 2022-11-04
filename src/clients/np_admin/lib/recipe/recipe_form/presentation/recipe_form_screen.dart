@@ -39,8 +39,8 @@ class RecipeFormScreen extends StatelessWidget {
                       _DescriptionInput(),
                       SizedBox(height: 16),
                       _CategoryInput(),
-                      // SizedBox(height: 16),
-                      // _IngredientsInput(),
+                      SizedBox(height: 16),
+                      _IngredientsInput(),
                       SizedBox(height: 16),
                       _DirectionsInput(),
                     ],
@@ -141,80 +141,32 @@ class _CategoryInput extends HookWidget {
   }
 }
 
-// class _IngredientsInput extends StatefulWidget {
-//   const _IngredientsInput({super.key});
+class _IngredientsInput extends StatelessWidget {
+  const _IngredientsInput({super.key});
 
-//   @override
-//   State<_IngredientsInput> createState() => _IngredientsInputState();
-// }
-
-// class _IngredientsInputState extends State<_IngredientsInput> {
-//   bool isEditing = false;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return BlocBuilder<RecipeFormBloc, RecipeFormState>(
-//       // buildWhen: (prev, curr) =>
-//       //     prev.recipe.ingredients != curr.recipe.ingredients,
-//       builder: (context, state) {
-//         // print('building ingredients list');
-//         // state.recipe.ingredients.list.forEach((entry) {
-//         //   print(entry.text);
-//         // });
-//         return Card(
-//           child: Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: [
-//               ListTile(
-//                 title: const Text('Ingredients'),
-//                 trailing: IconButton(
-//                   onPressed: () => setState(() => isEditing = !isEditing),
-//                   icon: isEditing
-//                       ? const Icon(Icons.done)
-//                       : const Icon(Icons.edit),
-//                 ),
-//               ),
-//               ...state.recipe.ingredients.list.map((e) {
-//                 if (isEditing) {
-//                   return Row(
-//                     children: [
-//                       Expanded(
-//                         child: TextFormField(
-//                           initialValue: e.text,
-//                           // decoration:
-//                           //     const InputDecoration(label: Text(e.id.toString())),
-//                           onChanged: (input) => context
-//                               .read<RecipeFormBloc>()
-//                               .add(RecipeFormEvent.onChangeEntryFromIngredients(
-//                                   e, input)),
-//                           // validator: (_) => state.recipe.description.value.fold(
-//                           //   (l) => 'Invalid',
-//                           //   (r) => null,
-//                           // ),
-//                         ),
-//                       ),
-//                       IconButton(
-//                         icon: const Icon(Icons.remove),
-//                         onPressed: () {
-//                           context.read<RecipeFormBloc>().add(
-//                               RecipeFormEvent.onRemoveEntryFromIngredients(e));
-//                         },
-//                       ),
-//                     ],
-//                   );
-//                 }
-//                 return ListTile(
-//                   title: Text(e.text),
-//                   dense: true,
-//                 );
-//               }).toList(),
-//             ],
-//           ),
-//         );
-//       },
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<RecipeFormBloc, RecipeFormState>(
+      buildWhen: (prev, curr) =>
+          prev.recipe.ingredients != curr.recipe.ingredients,
+      builder: (context, state) {
+        var bloc = EditListBloc(
+          onListEdit: (dartz.IList<String> directions) {
+            context
+                .read<RecipeFormBloc>()
+                .add(RecipeFormEvent.onDirectionsInput(directions));
+          },
+          list: state.recipe.ingredients,
+          title: 'Ingredients',
+        );
+        return BlocProvider.value(
+          value: bloc,
+          child: const EditList(),
+        );
+      },
+    );
+  }
+}
 
 class _DirectionsInput extends StatelessWidget {
   const _DirectionsInput({super.key});
@@ -223,13 +175,20 @@ class _DirectionsInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<RecipeFormBloc, RecipeFormState>(
       buildWhen: (prev, curr) =>
-          prev.recipe.directions.length() != curr.recipe.directions.length(),
+          prev.recipe.directions != curr.recipe.directions,
       builder: (context, state) {
-        print(state.recipe.directions.length());
-        var bloc = EditListBloc(() {}, state.recipe.directions);
+        var bloc = EditListBloc(
+          onListEdit: (dartz.IList<String> directions) {
+            context
+                .read<RecipeFormBloc>()
+                .add(RecipeFormEvent.onDirectionsInput(directions));
+          },
+          list: state.recipe.directions,
+          title: 'Directions',
+        );
         return BlocProvider.value(
           value: bloc,
-          child: EditList(),
+          child: const EditList(),
         );
       },
     );

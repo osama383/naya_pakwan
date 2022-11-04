@@ -23,7 +23,7 @@ mixin _$Recipe {
       throw _privateConstructorUsedError; //ingredient usualy follows the pattern of quantity, container and item
 //2 cups of rice
 //1 tablespoon soymilk, preferrably unsweetened
-  RecipeIngredients get ingredients =>
+  IList<String> get ingredients =>
       throw _privateConstructorUsedError; //steps or directions
   IList<String> get directions => throw _privateConstructorUsedError; //tips
 //should default to empty list when parsing fromjson if key not found
@@ -43,7 +43,7 @@ abstract class $RecipeCopyWith<$Res> {
       RecipeTitle title,
       RecipeCategory category,
       RecipeDescription description,
-      RecipeIngredients ingredients,
+      IList<String> ingredients,
       IList<String> directions,
       List<String> tips});
 }
@@ -89,7 +89,7 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
       ingredients: null == ingredients
           ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
-              as RecipeIngredients,
+              as IList<String>,
       directions: null == directions
           ? _value.directions
           : directions // ignore: cast_nullable_to_non_nullable
@@ -113,7 +113,7 @@ abstract class _$$_RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
       RecipeTitle title,
       RecipeCategory category,
       RecipeDescription description,
-      RecipeIngredients ingredients,
+      IList<String> ingredients,
       IList<String> directions,
       List<String> tips});
 }
@@ -156,7 +156,7 @@ class __$$_RecipeCopyWithImpl<$Res>
       ingredients: null == ingredients
           ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
-              as RecipeIngredients,
+              as IList<String>,
       directions: null == directions
           ? _value.directions
           : directions // ignore: cast_nullable_to_non_nullable
@@ -194,7 +194,7 @@ class _$_Recipe implements _Recipe {
 //2 cups of rice
 //1 tablespoon soymilk, preferrably unsweetened
   @override
-  final RecipeIngredients ingredients;
+  final IList<String> ingredients;
 //steps or directions
   @override
   final IList<String> directions;
@@ -249,7 +249,7 @@ abstract class _Recipe implements Recipe {
       required final RecipeTitle title,
       required final RecipeCategory category,
       required final RecipeDescription description,
-      required final RecipeIngredients ingredients,
+      required final IList<String> ingredients,
       required final IList<String> directions,
       required final List<String> tips}) = _$_Recipe;
 
@@ -264,7 +264,7 @@ abstract class _Recipe implements Recipe {
   @override //ingredient usualy follows the pattern of quantity, container and item
 //2 cups of rice
 //1 tablespoon soymilk, preferrably unsweetened
-  RecipeIngredients get ingredients;
+  IList<String> get ingredients;
   @override //steps or directions
   IList<String> get directions;
   @override //tips

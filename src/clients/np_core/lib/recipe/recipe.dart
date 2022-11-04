@@ -21,7 +21,7 @@ class Recipe with _$Recipe {
     //ingredient usualy follows the pattern of quantity, container and item
     //2 cups of rice
     //1 tablespoon soymilk, preferrably unsweetened
-    required RecipeIngredients ingredients,
+    required IList<String> ingredients,
 
     //steps or directions
     required IList<String> directions,
@@ -39,7 +39,7 @@ class Recipe with _$Recipe {
         title: RecipeTitle.empty(),
         category: RecipeCategory.lunchAndDinner,
         description: RecipeDescription.empty(),
-        ingredients: RecipeIngredients(LinkedList<EntryItem>()),
+        ingredients: IList.from([]),
         directions: IList.from([]),
         tips: [],
       );
@@ -53,12 +53,11 @@ List<Recipe> dummyRecipes = [
     category: RecipeCategory.breakfast,
     description: RecipeDescription(
         'This protein-packed breakfast option is great because the prep work is done the night before. All you need to do is wake up and enjoy.'),
-    ingredients: RecipeIngredients(LinkedList<EntryItem>()
-      ..addAll([
-        EntryItem('1/2 kg Wheat'),
-        EntryItem('1 teaspoon Sugar'),
-        EntryItem('1 cup of Rice'),
-      ])),
+    ingredients: IList.from([
+      '1/2 kg Wheat',
+      '1 teaspoon Sugar',
+      '1 cup of Rice',
+    ]),
     directions: IList.from([
       'Mash banana in a bowl with a fork and add other ingredients and stir well. Cover and leave in refrigerator overnight.',
       'The next day, just stir and enjoy. You can eat it cold, or warm  it up.',
@@ -72,7 +71,7 @@ List<Recipe> dummyRecipes = [
     category: RecipeCategory.lunchAndDinner,
     description: RecipeDescription(
         'This protein-packed breakfast option is great because the prep work is done the night before. All you need to do is wake up and enjoy.'),
-    ingredients: RecipeIngredients(LinkedList<EntryItem>()),
+    ingredients: IList.from([]),
     directions: IList.from([]),
     tips: [],
   ),

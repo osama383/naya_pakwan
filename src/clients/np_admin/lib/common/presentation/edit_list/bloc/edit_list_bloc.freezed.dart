@@ -18,7 +18,6 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$EditListEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onToggleEditing,
     required TResult Function(int index, String input) onEntryInput,
     required TResult Function() onAddEntry,
     required TResult Function(int index) onRemoveEntry,
@@ -26,7 +25,6 @@ mixin _$EditListEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? onToggleEditing,
     TResult? Function(int index, String input)? onEntryInput,
     TResult? Function()? onAddEntry,
     TResult? Function(int index)? onRemoveEntry,
@@ -34,7 +32,6 @@ mixin _$EditListEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onToggleEditing,
     TResult Function(int index, String input)? onEntryInput,
     TResult Function()? onAddEntry,
     TResult Function(int index)? onRemoveEntry,
@@ -43,7 +40,6 @@ mixin _$EditListEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_OnToggleEditingDirections value) onToggleEditing,
     required TResult Function(_OnEntryInput value) onEntryInput,
     required TResult Function(_OnAddEntry value) onAddEntry,
     required TResult Function(_OnRemoveEntry value) onRemoveEntry,
@@ -51,7 +47,6 @@ mixin _$EditListEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_OnToggleEditingDirections value)? onToggleEditing,
     TResult? Function(_OnEntryInput value)? onEntryInput,
     TResult? Function(_OnAddEntry value)? onAddEntry,
     TResult? Function(_OnRemoveEntry value)? onRemoveEntry,
@@ -59,7 +54,6 @@ mixin _$EditListEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_OnToggleEditingDirections value)? onToggleEditing,
     TResult Function(_OnEntryInput value)? onEntryInput,
     TResult Function(_OnAddEntry value)? onAddEntry,
     TResult Function(_OnRemoveEntry value)? onRemoveEntry,
@@ -84,123 +78,6 @@ class _$EditListEventCopyWithImpl<$Res, $Val extends EditListEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$_OnToggleEditingDirectionsCopyWith<$Res> {
-  factory _$$_OnToggleEditingDirectionsCopyWith(
-          _$_OnToggleEditingDirections value,
-          $Res Function(_$_OnToggleEditingDirections) then) =
-      __$$_OnToggleEditingDirectionsCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_OnToggleEditingDirectionsCopyWithImpl<$Res>
-    extends _$EditListEventCopyWithImpl<$Res, _$_OnToggleEditingDirections>
-    implements _$$_OnToggleEditingDirectionsCopyWith<$Res> {
-  __$$_OnToggleEditingDirectionsCopyWithImpl(
-      _$_OnToggleEditingDirections _value,
-      $Res Function(_$_OnToggleEditingDirections) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$_OnToggleEditingDirections implements _OnToggleEditingDirections {
-  const _$_OnToggleEditingDirections();
-
-  @override
-  String toString() {
-    return 'EditListEvent.onToggleEditing()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_OnToggleEditingDirections);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() onToggleEditing,
-    required TResult Function(int index, String input) onEntryInput,
-    required TResult Function() onAddEntry,
-    required TResult Function(int index) onRemoveEntry,
-  }) {
-    return onToggleEditing();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? onToggleEditing,
-    TResult? Function(int index, String input)? onEntryInput,
-    TResult? Function()? onAddEntry,
-    TResult? Function(int index)? onRemoveEntry,
-  }) {
-    return onToggleEditing?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onToggleEditing,
-    TResult Function(int index, String input)? onEntryInput,
-    TResult Function()? onAddEntry,
-    TResult Function(int index)? onRemoveEntry,
-    required TResult orElse(),
-  }) {
-    if (onToggleEditing != null) {
-      return onToggleEditing();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_OnToggleEditingDirections value) onToggleEditing,
-    required TResult Function(_OnEntryInput value) onEntryInput,
-    required TResult Function(_OnAddEntry value) onAddEntry,
-    required TResult Function(_OnRemoveEntry value) onRemoveEntry,
-  }) {
-    return onToggleEditing(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_OnToggleEditingDirections value)? onToggleEditing,
-    TResult? Function(_OnEntryInput value)? onEntryInput,
-    TResult? Function(_OnAddEntry value)? onAddEntry,
-    TResult? Function(_OnRemoveEntry value)? onRemoveEntry,
-  }) {
-    return onToggleEditing?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_OnToggleEditingDirections value)? onToggleEditing,
-    TResult Function(_OnEntryInput value)? onEntryInput,
-    TResult Function(_OnAddEntry value)? onAddEntry,
-    TResult Function(_OnRemoveEntry value)? onRemoveEntry,
-    required TResult orElse(),
-  }) {
-    if (onToggleEditing != null) {
-      return onToggleEditing(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _OnToggleEditingDirections implements EditListEvent {
-  const factory _OnToggleEditingDirections() = _$_OnToggleEditingDirections;
 }
 
 /// @nodoc
@@ -275,7 +152,6 @@ class _$_OnEntryInput implements _OnEntryInput {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onToggleEditing,
     required TResult Function(int index, String input) onEntryInput,
     required TResult Function() onAddEntry,
     required TResult Function(int index) onRemoveEntry,
@@ -286,7 +162,6 @@ class _$_OnEntryInput implements _OnEntryInput {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? onToggleEditing,
     TResult? Function(int index, String input)? onEntryInput,
     TResult? Function()? onAddEntry,
     TResult? Function(int index)? onRemoveEntry,
@@ -297,7 +172,6 @@ class _$_OnEntryInput implements _OnEntryInput {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onToggleEditing,
     TResult Function(int index, String input)? onEntryInput,
     TResult Function()? onAddEntry,
     TResult Function(int index)? onRemoveEntry,
@@ -312,7 +186,6 @@ class _$_OnEntryInput implements _OnEntryInput {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_OnToggleEditingDirections value) onToggleEditing,
     required TResult Function(_OnEntryInput value) onEntryInput,
     required TResult Function(_OnAddEntry value) onAddEntry,
     required TResult Function(_OnRemoveEntry value) onRemoveEntry,
@@ -323,7 +196,6 @@ class _$_OnEntryInput implements _OnEntryInput {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_OnToggleEditingDirections value)? onToggleEditing,
     TResult? Function(_OnEntryInput value)? onEntryInput,
     TResult? Function(_OnAddEntry value)? onAddEntry,
     TResult? Function(_OnRemoveEntry value)? onRemoveEntry,
@@ -334,7 +206,6 @@ class _$_OnEntryInput implements _OnEntryInput {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_OnToggleEditingDirections value)? onToggleEditing,
     TResult Function(_OnEntryInput value)? onEntryInput,
     TResult Function(_OnAddEntry value)? onAddEntry,
     TResult Function(_OnRemoveEntry value)? onRemoveEntry,
@@ -396,7 +267,6 @@ class _$_OnAddEntry implements _OnAddEntry {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onToggleEditing,
     required TResult Function(int index, String input) onEntryInput,
     required TResult Function() onAddEntry,
     required TResult Function(int index) onRemoveEntry,
@@ -407,7 +277,6 @@ class _$_OnAddEntry implements _OnAddEntry {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? onToggleEditing,
     TResult? Function(int index, String input)? onEntryInput,
     TResult? Function()? onAddEntry,
     TResult? Function(int index)? onRemoveEntry,
@@ -418,7 +287,6 @@ class _$_OnAddEntry implements _OnAddEntry {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onToggleEditing,
     TResult Function(int index, String input)? onEntryInput,
     TResult Function()? onAddEntry,
     TResult Function(int index)? onRemoveEntry,
@@ -433,7 +301,6 @@ class _$_OnAddEntry implements _OnAddEntry {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_OnToggleEditingDirections value) onToggleEditing,
     required TResult Function(_OnEntryInput value) onEntryInput,
     required TResult Function(_OnAddEntry value) onAddEntry,
     required TResult Function(_OnRemoveEntry value) onRemoveEntry,
@@ -444,7 +311,6 @@ class _$_OnAddEntry implements _OnAddEntry {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_OnToggleEditingDirections value)? onToggleEditing,
     TResult? Function(_OnEntryInput value)? onEntryInput,
     TResult? Function(_OnAddEntry value)? onAddEntry,
     TResult? Function(_OnRemoveEntry value)? onRemoveEntry,
@@ -455,7 +321,6 @@ class _$_OnAddEntry implements _OnAddEntry {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_OnToggleEditingDirections value)? onToggleEditing,
     TResult Function(_OnEntryInput value)? onEntryInput,
     TResult Function(_OnAddEntry value)? onAddEntry,
     TResult Function(_OnRemoveEntry value)? onRemoveEntry,
@@ -536,7 +401,6 @@ class _$_OnRemoveEntry implements _OnRemoveEntry {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onToggleEditing,
     required TResult Function(int index, String input) onEntryInput,
     required TResult Function() onAddEntry,
     required TResult Function(int index) onRemoveEntry,
@@ -547,7 +411,6 @@ class _$_OnRemoveEntry implements _OnRemoveEntry {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? onToggleEditing,
     TResult? Function(int index, String input)? onEntryInput,
     TResult? Function()? onAddEntry,
     TResult? Function(int index)? onRemoveEntry,
@@ -558,7 +421,6 @@ class _$_OnRemoveEntry implements _OnRemoveEntry {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onToggleEditing,
     TResult Function(int index, String input)? onEntryInput,
     TResult Function()? onAddEntry,
     TResult Function(int index)? onRemoveEntry,
@@ -573,7 +435,6 @@ class _$_OnRemoveEntry implements _OnRemoveEntry {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_OnToggleEditingDirections value) onToggleEditing,
     required TResult Function(_OnEntryInput value) onEntryInput,
     required TResult Function(_OnAddEntry value) onAddEntry,
     required TResult Function(_OnRemoveEntry value) onRemoveEntry,
@@ -584,7 +445,6 @@ class _$_OnRemoveEntry implements _OnRemoveEntry {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_OnToggleEditingDirections value)? onToggleEditing,
     TResult? Function(_OnEntryInput value)? onEntryInput,
     TResult? Function(_OnAddEntry value)? onAddEntry,
     TResult? Function(_OnRemoveEntry value)? onRemoveEntry,
@@ -595,7 +455,6 @@ class _$_OnRemoveEntry implements _OnRemoveEntry {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_OnToggleEditingDirections value)? onToggleEditing,
     TResult Function(_OnEntryInput value)? onEntryInput,
     TResult Function(_OnAddEntry value)? onAddEntry,
     TResult Function(_OnRemoveEntry value)? onRemoveEntry,
@@ -619,8 +478,8 @@ abstract class _OnRemoveEntry implements EditListEvent {
 
 /// @nodoc
 mixin _$EditListState {
+  String get title => throw _privateConstructorUsedError;
   IList<String> get list => throw _privateConstructorUsedError;
-  bool get isEditing => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $EditListStateCopyWith<EditListState> get copyWith =>
@@ -633,7 +492,7 @@ abstract class $EditListStateCopyWith<$Res> {
           EditListState value, $Res Function(EditListState) then) =
       _$EditListStateCopyWithImpl<$Res, EditListState>;
   @useResult
-  $Res call({IList<String> list, bool isEditing});
+  $Res call({String title, IList<String> list});
 }
 
 /// @nodoc
@@ -649,18 +508,18 @@ class _$EditListStateCopyWithImpl<$Res, $Val extends EditListState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? title = null,
     Object? list = null,
-    Object? isEditing = null,
   }) {
     return _then(_value.copyWith(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
       list: null == list
           ? _value.list
           : list // ignore: cast_nullable_to_non_nullable
               as IList<String>,
-      isEditing: null == isEditing
-          ? _value.isEditing
-          : isEditing // ignore: cast_nullable_to_non_nullable
-              as bool,
     ) as $Val);
   }
 }
@@ -673,7 +532,7 @@ abstract class _$$_EditListStateCopyWith<$Res>
       __$$_EditListStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({IList<String> list, bool isEditing});
+  $Res call({String title, IList<String> list});
 }
 
 /// @nodoc
@@ -687,18 +546,18 @@ class __$$_EditListStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? title = null,
     Object? list = null,
-    Object? isEditing = null,
   }) {
     return _then(_$_EditListState(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
       list: null == list
           ? _value.list
           : list // ignore: cast_nullable_to_non_nullable
               as IList<String>,
-      isEditing: null == isEditing
-          ? _value.isEditing
-          : isEditing // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -706,16 +565,16 @@ class __$$_EditListStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_EditListState implements _EditListState {
-  const _$_EditListState({required this.list, required this.isEditing});
+  const _$_EditListState({required this.title, required this.list});
 
   @override
-  final IList<String> list;
+  final String title;
   @override
-  final bool isEditing;
+  final IList<String> list;
 
   @override
   String toString() {
-    return 'EditListState(list: $list, isEditing: $isEditing)';
+    return 'EditListState(title: $title, list: $list)';
   }
 
   @override
@@ -723,13 +582,12 @@ class _$_EditListState implements _EditListState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_EditListState &&
-            (identical(other.list, list) || other.list == list) &&
-            (identical(other.isEditing, isEditing) ||
-                other.isEditing == isEditing));
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.list, list) || other.list == list));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, list, isEditing);
+  int get hashCode => Object.hash(runtimeType, title, list);
 
   @JsonKey(ignore: true)
   @override
@@ -740,13 +598,13 @@ class _$_EditListState implements _EditListState {
 
 abstract class _EditListState implements EditListState {
   const factory _EditListState(
-      {required final IList<String> list,
-      required final bool isEditing}) = _$_EditListState;
+      {required final String title,
+      required final IList<String> list}) = _$_EditListState;
 
   @override
-  IList<String> get list;
+  String get title;
   @override
-  bool get isEditing;
+  IList<String> get list;
   @override
   @JsonKey(ignore: true)
   _$$_EditListStateCopyWith<_$_EditListState> get copyWith =>

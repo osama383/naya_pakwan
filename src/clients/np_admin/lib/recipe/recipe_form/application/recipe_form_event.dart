@@ -12,21 +12,9 @@ class RecipeFormEvent with _$RecipeFormEvent {
   const factory RecipeFormEvent.onDescriptionInput(String input) =
       _OnDescriptionInput;
 
-  // const factory RecipeFormEvent.onRemoveEntryFromIngredients(EntryItem item) =
-  //     _OnRemoveEntryFromIngredients;
-  // const factory RecipeFormEvent.onToggleEditingDirections() =
-  //     _OnToggleEditingDirections;
+  const factory RecipeFormEvent.onDirectionsInput(IList<String> directions) =
+      _OnDirectionsInput;
 
-  // const factory RecipeFormEvent.onChangeEntryFromIngredients(
-  //   EntryItem item,
-  //   String netText,
-  // ) = _OnChangeEntryFromIngredients;
-
-  // const factory RecipeFormEvent.onDirectionInput(int index, String input) =
-  //     _OnDirectionInput;
-  // const factory RecipeFormEvent.onAddDirection() = _OnAddDirection;
-  // const factory RecipeFormEvent.onRempveDirection(int index) =
-  //     _OnRempveDirection;
-
-  // const factory RecipeFormEvent.onAionInput(String input) = _OnDescriptionInput;
+  const factory RecipeFormEvent.onIngredientsInput(IList<String> ingredients) =
+      _OnIngredientsInput;
 }

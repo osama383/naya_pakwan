@@ -7,10 +7,13 @@ part 'edit_list_state.dart';
 part 'edit_list_bloc.freezed.dart';
 
 class EditListBloc extends Bloc<EditListEvent, EditListState> {
-  final Function onEditingComplete;
+  final Function onListEdit;
 
-  EditListBloc(this.onEditingComplete, IList<String> list)
-      : super(EditListState.initial(list)) {
+  EditListBloc({
+    required String title,
+    required this.onListEdit,
+    required IList<String> list,
+  }) : super(EditListState.initial(title, list)) {
     on<EditListEvent>((event, emit) {
       event.map(
         onAddEntry: (event) {
@@ -19,6 +22,7 @@ class EditListBloc extends Bloc<EditListEvent, EditListState> {
           emit(state.copyWith(
             list: IList.from(directions),
           ));
+          onListEdit(state.list);
         },
         onRemoveEntry: (event) {
           var directions = state.list.toList();
@@ -26,10 +30,7 @@ class EditListBloc extends Bloc<EditListEvent, EditListState> {
           emit(state.copyWith(
             list: IList.from(directions),
           ));
-        },
-        onToggleEditing: (event) {
-          emit(state.copyWith(isEditing: !state.isEditing));
-          onEditingComplete();
+          onListEdit(state.list);
         },
         onEntryInput: (event) {
           var directions = state.list.toList();
@@ -37,6 +38,7 @@ class EditListBloc extends Bloc<EditListEvent, EditListState> {
           emit(state.copyWith(
             list: IList.from(directions),
           ));
+          onListEdit(state.list);
         },
       );
     });
