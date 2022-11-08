@@ -4,7 +4,6 @@ import 'package:np_admin/injection.dart';
 import 'package:np_admin/recipe/recipe_form/presentation/recipe_form_screen.dart';
 import 'package:np_admin/recipe/recipe_list/application/recipe_list_bloc.dart';
 import 'package:np_admin/recipe/recipe_list/presentation/recipe_list.dart';
-import 'package:np_core/recipe/recipe.dart';
 
 class RecipeListScreen extends StatelessWidget {
   const RecipeListScreen({Key? key}) : super(key: key);

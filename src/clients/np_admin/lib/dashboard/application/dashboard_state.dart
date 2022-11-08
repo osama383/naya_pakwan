@@ -4,5 +4,5 @@ part of 'dashboard_bloc.dart';
 class DashboardState with _$DashboardState {
   const factory DashboardState() = _DashboardState;
 
-  factory DashboardState.initial() => _DashboardState();
+  factory DashboardState.initial() => const _DashboardState();
 }

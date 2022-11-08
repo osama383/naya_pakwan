@@ -24,21 +24,23 @@ dependencies:
   flutter:
     sdk: flutter
 
-  np_core: 
-    path: ../np_core
-  cupertino_icons: ^1.0.2
   bloc: ^8.1.0
-  flutter_bloc: ^8.1.1
-  freezed_annotation: ^2.2.0
-  json_annotation: ^4.7.0
+  cloud_firestore: ^4.0.2
+  collapsible_sidebar: ^2.0.3+2
+  cupertino_icons: ^1.0.2
   dartz: ^0.10.1
-  uuid: ^3.0.6
   equatable: ^2.0.5
-  injectable: ^1.5.3
   firebase_auth: ^4.0.2
   firebase_core: ^2.1.0
+  flutter_bloc: ^8.1.1
   flutter_hooks: ^0.18.5+1
-  cloud_firestore: ^4.0.2
+  font_awesome_flutter: ^10.2.1
+  freezed_annotation: ^2.2.0
+  injectable: ^1.5.3
+  json_annotation: ^4.7.0
+  np_core: 
+    path: ../np_core
+  uuid: ^3.0.6
 
 dev_dependencies:
   flutter_test:
